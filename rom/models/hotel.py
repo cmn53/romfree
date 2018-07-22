@@ -18,21 +18,35 @@ class HotelArrival(models.Model):
     qtr_arrival_score = models.FloatField(default=0)
     half_arrival_score = models.FloatField(default=0)
 
-    def load_qtr_arrival_scores(self):
-        arrival_patterns = self.arrival.nearby_patterns(0.25)
-        hotel_patterns = self.hotel.nearby_patterns(0.25)
-
-        distance = self.arrival.geom.distance(self.hotel.geom) * 62.1371
-        self.distance = distance
+    @classmethod
+    def load_qtr_arrival_scores(cls):
+        for ha in HotelArrival.objects.all():
+            arrival_patterns = ha.arrival.nearby_patterns(0.25)
+            hotel_patterns = ha.hotel.nearby_patterns(0.25)
 
         if arrival_patterns.filter(pk__in=hotel_patterns):
-            if distance < 10:
-                self.qtr_arrival_score = 10
+            if ha.distance < 10:
+                ha.qtr_arrival_score = 10
             else:
-                self.qtr_arrival_score = 5
+                ha.qtr_arrival_score = 5
         else:
-            self.qtr_arrival_score = 0
-        self.save()
+            ha.qtr_arrival_score = 0
+        ha.save()
+
+    @classmethod
+    def load_half_arrival_scores(cls):
+        for ha in HotelArrival.objects.all():
+            arrival_patterns = ha.arrival.nearby_patterns(0.5)
+            hotel_patterns = ha.hotel.nearby_patterns(0.5)
+
+        if arrival_patterns.filter(pk__in=hotel_patterns):
+            if ha.distance < 10:
+                ha.half_arrival_score = 10
+            else:
+                ha.half_arrival_score = 5
+        else:
+            ha.half_arrival_score = 0
+        ha.save()
 
 class Hotel(models.Model):
     hotel_code = models.IntegerField()
