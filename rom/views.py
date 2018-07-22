@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.core.serializers import serialize
 
-from .models import Arrival, Hotel, Metro, Score
+from .models import Arrival, Hotel, Metro, Route, Score
 from .forms import SearchForm
 
 from collections import OrderedDict
@@ -32,7 +32,7 @@ def index(request):
 def results(request, metro_id, arrival_id):
     metro = get_object_or_404(Metro, pk=metro_id)
     map_center = [metro.centroid.coords[1], metro.centroid.coords[0]]
-
+    routes = Route.objects.filter(operator__metro=metro)
     hotels = Hotel.objects.filter(metro=metro)
     hotel_scores = {}
     hotel_images = {}
@@ -45,12 +45,15 @@ def results(request, metro_id, arrival_id):
     #sorted_hotels = sorted(hotels, key= lambda t: t.score.qtr_score(arrival_id), reverse=True)
     geojson = serialize('geojson', hotels,
         geometry_field='geom', fields=('name','hotel.score.qtr_trips',))
+
+    routes_geojson = serialize('geojson', routes, geometry_field='geom', fields = ('name', 'color', 'vehicle_type',))
     context = {
         'metro': metro,
         'map_center': map_center,
         'sorted_hotels': sorted_hotels,
         'hotel_images': hotel_images,
-        'geojson': geojson
+        'geojson': geojson,
+        'routes': routes_geojson
     }
 
     return render(request, 'rom/results.html', context)

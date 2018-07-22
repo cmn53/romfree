@@ -1,0 +1,12 @@
+h2 {
+  color: green;
+}
+
+#map {
+  height: 400px;
+}
+
+.leaflet-marker-icon {
+	font-weight: bold;
+	font-family: sans-serif;
+}
