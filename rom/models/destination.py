@@ -12,3 +12,12 @@ class Destination(models.Model):
 
     def __str__(self):
         return self.name
+
+    def nearby_stops(self, radius):
+        stops = Stop.objects.filter(geom__distance_lte=(self.geom, Distance(mi=radius)))
+        return stops
+
+    def nearby_patterns(self, radius):
+        stops = self.nearby_stops(radius)
+        patterns = Pattern.objects.filter(stops__in=stops).distinct()
+        return patterns

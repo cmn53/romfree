@@ -13,3 +13,9 @@ class Pattern(models.Model):
 
     def __str__(self):
         return "%s Pattern %s" %(self.route.operator.name, self.pattern_onestop_id)
+
+    @property
+    def weekly_trips(self):
+        # Total trips operated on pattern during an average week
+        total = (self.wk_trips * 5) + self.sa_trips + self.su_trips
+        return total

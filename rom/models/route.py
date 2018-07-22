@@ -13,3 +13,11 @@ class Route(models.Model):
 
     def __str__(self):
         return "%s Route %s" %(self.operator.name, self.name)
+
+    def operatates_on_sat(self):
+        sat_trips = self.pattern_set.aggregate(Sum("sa_trips"))
+        return sat_trips["sa_trips__sum"] > 0
+
+    def operates_on_sun(self):
+        sun_trips = self.pattern_set.aggregate(Sum("su_trips"))
+        return sun_trips["su_trips__sum"] > 0
