@@ -11,10 +11,12 @@ class Score(models.Model):
     qtr_freq_trips = models.IntegerField()
     qtr_dest = models.IntegerField()
     qtr_dest_trips = models.IntegerField()
+    qtr_static_score = models.FloatField(default=0)
     half_trips = models.IntegerField()
     half_freq_trips = models.IntegerField()
     half_dest = models.IntegerField()
     half_dest_trips = models.IntegerField()
+    half_static_score = models.FloatField(default=0)
 
     def __str__(self):
         return ("Score: hotel %d" %self.hotel.id)
