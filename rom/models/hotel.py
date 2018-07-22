@@ -7,8 +7,32 @@ from .metro import Metro
 from .stop import Stop
 from .pattern import Pattern
 from .route import Route
+from .arrival import Arrival
 from .destination import Destination
 import json
+
+class HotelArrival(models.Model):
+    hotel = models.ForeignKey('Hotel', on_delete=models.CASCADE)
+    arrival = models.ForeignKey(Arrival, on_delete=models.CASCADE)
+    distance = models.FloatField()
+    qtr_arrival_score = models.FloatField(default=0)
+    half_arrival_score = models.FloatField(default=0)
+
+    def load_qtr_arrival_scores(self):
+        arrival_patterns = self.arrival.nearby_patterns(0.25)
+        hotel_patterns = self.hotel.nearby_patterns(0.25)
+
+        distance = self.arrival.geom.distance(self.hotel.geom) * 62.1371
+        self.distance = distance
+
+        if arrival_patterns.filter(pk__in=hotel_patterns):
+            if distance < 10:
+                self.qtr_arrival_score = 10
+            else:
+                self.qtr_arrival_score = 5
+        else:
+            self.qtr_arrival_score = 0
+        self.save()
 
 class Hotel(models.Model):
     hotel_code = models.IntegerField()
@@ -19,6 +43,7 @@ class Hotel(models.Model):
     city = models.CharField(max_length=50, blank=True, null=True)
     postal_code = models.CharField(max_length=20, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
+    arrivals = models.ManyToManyField(Arrival, through=HotelArrival, through_fields=('hotel', 'arrival'),)
 
     def __str__(self):
         return self.name

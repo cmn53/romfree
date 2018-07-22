@@ -8,3 +8,4 @@ from .stop import Stop
 from .arrival import Arrival
 from .destination import Destination
 from .score import Score
+from .hotel import HotelArrival
