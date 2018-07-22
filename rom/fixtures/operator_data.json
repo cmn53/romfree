@@ -1,0 +1,275 @@
+[
+  {
+    "metro_code": "CLV",
+    "name": "Greater Cleveland Regional Transit Authority",
+    "short_name": "GCRTA",
+    "operator_onestop_id": "o-dpmg-greaterclevelandregionaltransitauthority",
+    "represented_in_feed_onestop_ids": [
+      "f-dpmg-rta"
+    ]
+  },
+  {
+    "metro_code": "SEA",
+    "name": "Sound Transit",
+    "short_name": null,
+    "operator_onestop_id": "o-c23-soundtransit",
+    "represented_in_feed_onestop_ids": [
+      "f-c23-metrokingcounty",
+      "f-c22-piercetransit~soundtransit",
+      "f-c23-soundtransit"
+    ]
+  },
+  {
+    "metro_code": "SEA",
+    "name": "King County Marine Divison",
+    "short_name": null,
+    "operator_onestop_id": "o-c22y-kingcountymarinedivison",
+    "represented_in_feed_onestop_ids": [
+      "f-c23-metrokingcounty"
+    ]
+  },
+  {
+    "metro_code": "SEA",
+    "name": "King County Metro",
+    "short_name": "Metro",
+    "operator_onestop_id": "o-c23-metrotransit",
+    "represented_in_feed_onestop_ids": [
+      "f-c23-metrokingcounty"
+    ]
+  },
+  {
+    "metro_code": "SEA",
+    "name": "City of Seattle",
+    "short_name": "Seattle Streetcar",
+    "operator_onestop_id": "o-c23nb-cityofseattle",
+    "represented_in_feed_onestop_ids": [
+      "f-c23-metrokingcounty"
+    ]
+  },
+  {
+    "metro_code": "SEA",
+    "name": "Kitsap Transit",
+    "short_name": null,
+    "operator_onestop_id": "o-c22y-kitsaptransit",
+    "represented_in_feed_onestop_ids": [
+      "f-c22y-kitsaptransit"
+    ]
+  },
+  {
+    "metro_code": "SEA",
+    "name": "Washington State Ferries",
+    "short_name": "WSF",
+    "operator_onestop_id": "o-c28-washingtonstateferries",
+    "represented_in_feed_onestop_ids": [
+      "f-c28-washingtonstateferries"
+    ]
+  },
+  {
+    "metro_code": "SEA",
+    "name": "Community Transit",
+    "short_name": "CT",
+    "operator_onestop_id": "o-c29-communitytransit",
+    "represented_in_feed_onestop_ids": [
+      "f-c29-communitytransit"
+    ]
+  },
+  {
+    "metro_code": "SEA",
+    "name": "Dungeness Line",
+    "short_name": null,
+    "operator_onestop_id": "o-c22-dungenessline",
+    "represented_in_feed_onestop_ids": [
+      "f-c2-appleline~goldline~dungenessline~grapeline"
+    ]
+  },
+  {
+    "metro_code": "SEA",
+    "name": "The Victoria Clipper",
+    "short_name": null,
+    "operator_onestop_id": "o-c28-thevictoriaclipper",
+    "represented_in_feed_onestop_ids": [
+      "f-c28-thevictoriaclipper"
+    ]
+  },
+  {
+    "metro_code": "WAS",
+    "name": "DC Circulator",
+    "short_name": null,
+    "operator_onestop_id": "o-dqcjr-dccirculator",
+    "represented_in_feed_onestop_ids": [
+      "f-dqc-wmata",
+      "f-dqcjr-dccirculator"
+    ]
+  },
+  {
+    "metro_code": "WAS",
+    "name": "Washington Metropolitan Area Transit Authority",
+    "short_name": "WMATA",
+    "operator_onestop_id": "o-dqc-met",
+    "represented_in_feed_onestop_ids": [
+      "f-dqc-wmata"
+    ]
+  },
+  {
+    "metro_code": "WAS",
+    "name": "Fairfax Connector",
+    "short_name": "Fairfax Connector",
+    "operator_onestop_id": "o-dqcj-fairfaxconnector",
+    "represented_in_feed_onestop_ids": [
+      "f-dqcj-fairfaxconnector"
+    ]
+  },
+  {
+    "metro_code": "WAS",
+    "name": "Virginia Railway Express",
+    "short_name": "VRE",
+    "operator_onestop_id": "o-dqc-virginiarailwayexpress",
+    "represented_in_feed_onestop_ids": [
+      "f-dqc-virginiarailwayexpress"
+    ]
+  },
+  {
+    "metro_code": "WAS",
+    "name": "Montgomery County MD Ride On",
+    "short_name": "Ride On",
+    "operator_onestop_id": "o-dqc-montgomerycountymdrideon",
+    "represented_in_feed_onestop_ids": [
+      "f-dqc-montgomerycountymdrideon"
+    ]
+  },
+  {
+    "metro_code": "WAS",
+    "name": "Arlington Transit",
+    "short_name": "ART",
+    "operator_onestop_id": "o-dqcjj-arlingtontransit",
+    "represented_in_feed_onestop_ids": [
+      "f-dqcjj-arlingtontransit"
+    ]
+  },
+  {
+    "metro_code": "WAS",
+    "name": "Alexandria Transit Company",
+    "short_name": "DASH",
+    "operator_onestop_id": "o-dqchv-alexandriatransitcompanydash",
+    "represented_in_feed_onestop_ids": [
+      "f-dqchv-alexandriatransitcompanydash"
+    ]
+  },
+  {
+    "metro_code": "WAS",
+    "name": "Potomac and Rappahannock Transportation Commission",
+    "short_name": "PRTC",
+    "operator_onestop_id": "o-dqch-prtc",
+    "represented_in_feed_onestop_ids": [
+      "f-dqch-prtc"
+    ]
+  },
+  {
+    "metro_code": "WAS",
+    "name": "Prince George's County",
+    "short_name": "The Bus",
+    "operator_onestop_id": "o-dqc-thebusofprincegeorgescounty",
+    "represented_in_feed_onestop_ids": [
+      "f-dqc-thebusofprincegeorgescounty"
+    ]
+  },
+  {
+    "metro_code": "WAS",
+    "name": "Fairfax CUE Bus",
+    "short_name": "CUE",
+    "operator_onestop_id": "o-dqcj1-fairfaxcue",
+    "represented_in_feed_onestop_ids": [
+      "f-dqcj1-fairfaxcue"
+    ]
+  },
+  {
+    "metro_code": "WAS",
+    "name": "DC Streetcar",
+    "short_name": null,
+    "operator_onestop_id": "o-dqcm2-dcstreetcar",
+    "represented_in_feed_onestop_ids": [
+      "f-dqcm2-dcstreetcar"
+    ]
+  },
+  {
+    "metro_code": "ON",
+    "name": "Toronto Transit Comission",
+    "short_name": "TTC",
+    "operator_onestop_id": "o-dpz8-ttc",
+    "represented_in_feed_onestop_ids": [
+      "f-dpz8-ttc"
+    ]
+  },
+  {
+    "metro_code": "ON",
+    "name": "Oakville Transit",
+    "short_name": null,
+    "operator_onestop_id": "o-dpxr-oakvilletransit",
+    "represented_in_feed_onestop_ids": [
+      "f-dpxr-oakvilletransit"
+    ]
+  },
+  {
+    "metro_code": "ON",
+    "name": "Union Pearson Express",
+    "short_name": "UP Express",
+    "operator_onestop_id": "o-dpz2-upexpress",
+    "represented_in_feed_onestop_ids": [
+      "f-dpz2-upexpress"
+    ]
+  },
+  {
+    "metro_code": "ON",
+    "name": "GO Transit",
+    "short_name": null,
+    "operator_onestop_id": "o-dpz-gotransit",
+    "represented_in_feed_onestop_ids": [
+      "f-dpz-gotransit"
+    ]
+  },
+  {
+    "metro_code": "ON",
+    "name": "Brampton Transit",
+    "short_name": null,
+    "operator_onestop_id": "o-dpz2-bramptontransit",
+    "represented_in_feed_onestop_ids": [
+      "f-dpz2-bramptontransit"
+    ]
+  },
+  {
+    "metro_code": "ON",
+    "name": "Guelph Transit",
+    "short_name": null,
+    "operator_onestop_id": "o-dpwz-guelphtransit",
+    "represented_in_feed_onestop_ids": [
+      "f-dpwz-guelphtransit"
+    ]
+  },
+  {
+    "metro_code": "ON",
+    "name": "Durham Region Transit",
+    "short_name": "DRT",
+    "operator_onestop_id": "o-dpz-durhamregiontransit",
+    "represented_in_feed_onestop_ids": [
+      "f-dpz-durhamregiontransit"
+    ]
+  },
+  {
+    "metro_code": "ON",
+    "name": "MiWay",
+    "short_name": null,
+    "operator_onestop_id": "o-dpz2-miway",
+    "represented_in_feed_onestop_ids": [
+      "f-dpz2-miway"
+    ]
+  },
+  {
+    "metro_code": "ON",
+    "name": "York Region Transit",
+    "short_name": "YRT",
+    "operator_onestop_id": "o-dpz-yorkregiontransit",
+    "represented_in_feed_onestop_ids": [
+      "f-dpz-yorkregiontransit"
+    ]
+  }
+]

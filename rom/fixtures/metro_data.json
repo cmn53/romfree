@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Cleveland",
+    "metro_code": "CLV",
+    "country_code": "US",
+    "centroid": {"longitude": -81.688486, "latitude": 41.502240},
+    "nw_bound": {"longitude": -82.184601, "latitude": 41.677528},
+    "se_bound": {"longitude": -81.195831, "latitude": 41.278322}
+  },
+  {
+    "name": "Seattle",
+    "metro_code": "SEA",
+    "country_code": "US",
+    "centroid": {"longitude": -122.331964, "latitude": 47.606375},
+    "nw_bound": {"longitude": -122.578583, "latitude": 47.692895},
+    "se_bound": {"longitude": -122.084198, "latitude": 47.513259}
+  },
+  {
+    "name": "Washington DC",
+    "metro_code": "WAS",
+    "country_code": "US",
+    "centroid": {"longitude": -77.036550, "latitude": 38.903742},
+    "nw_bound": {"longitude": -77.283669, "latitude": 38.998108},
+    "se_bound": {"longitude": -76.789284, "latitude": 38.790754}
+  },
+  {
+    "name": "Toronto",
+    "metro_code": "ON",
+    "country_code": "CA",
+    "centroid": {"longitude": -79.385550, "latitude": 43.648891},
+    "nw_bound": {"longitude": -79.940643, "latitude": 43.868693},
+    "se_bound": {"longitude": -78.951874, "latitude": 43.483318}
+  }
+]

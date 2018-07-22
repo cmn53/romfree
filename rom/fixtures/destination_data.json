@@ -1,0 +1,2903 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.69659846165217,
+          41.50728410569412
+        ]
+      },
+      "properties": {
+        "place": "Great Lakes Science Center",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6116136,
+          41.508917
+        ]
+      },
+      "properties": {
+        "place": "Cleveland Museum of Art",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6093361,
+          41.5063477
+        ]
+      },
+      "properties": {
+        "place": "Cleveland Orchestra at Severance Hall",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.8834911,
+          41.4099794
+        ]
+      },
+      "properties": {
+        "place": "Rocky River Reservation",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.5983687,
+          41.5138354
+        ]
+      },
+      "properties": {
+        "place": "Lake View Cemetary",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6807947,
+          41.5013048
+        ]
+      },
+      "properties": {
+        "place": "Playhouse Square",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6852289,
+          41.496211
+        ]
+      },
+      "properties": {
+        "place": "Progressive Field",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.691557,
+          41.510065
+        ]
+      },
+      "properties": {
+        "place": "USS Cod Submarine Memorial",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.691775,
+          41.501174
+        ]
+      },
+      "properties": {
+        "place": "Cleveland Public Library",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.7030619,
+          41.4846863
+        ]
+      },
+      "properties": {
+        "place": "West Side Market",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6089873,
+          41.5091257
+        ]
+      },
+      "properties": {
+        "place": "University Circle",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6882129,
+          41.4964797
+        ]
+      },
+      "properties": {
+        "place": "Quicken Loans Arena",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6873931,
+          41.4687292
+        ]
+      },
+      "properties": {
+        "place": "A Christmas Story House",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.74684117308242,
+          41.48592230416214
+        ]
+      },
+      "properties": {
+        "place": "Edgewater Park",
+        "metro_code": "CLV",
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.5913365,
+          41.5100844
+        ]
+      },
+      "properties": {
+        "place": "James A Garfield Monument",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6953685,
+          41.5085414
+        ]
+      },
+      "properties": {
+        "place": "Rock and Roll Hall of Fame",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6095805,
+          41.5111197
+        ]
+      },
+      "properties": {
+        "place": "Cleveland Botanical Garden",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6104899,
+          41.5134163
+        ]
+      },
+      "properties": {
+        "place": "Cleveland History Center",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.7126134,
+          41.4459344
+        ]
+      },
+      "properties": {
+        "place": "Cleveland Metroparks Zoo",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.692933,
+          41.499488
+        ]
+      },
+      "properties": {
+        "place": "Solidiers and Sailors Monument",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.61288,
+          41.511522
+        ]
+      },
+      "properties": {
+        "place": "Cleveland Museum of Natural History",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.5987099,
+          41.5089934
+        ]
+      },
+      "properties": {
+        "place": "Little Italy",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.7045187,
+          41.4843807
+        ]
+      },
+      "properties": {
+        "place": "Great Lakes Brewing Company",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6941474,
+          41.5030311
+        ]
+      },
+      "properties": {
+        "place": "Huntington Convention Center of Cleveland",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.698045,
+          41.5092527
+        ]
+      },
+      "properties": {
+        "place": "Steamship William G Mather",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6107857,
+          41.5133686
+        ]
+      },
+      "properties": {
+        "place": "Western Reserve Historical Society",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.694789,
+          41.500395
+        ]
+      },
+      "properties": {
+        "place": "Old Stone Church",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6902536,
+          41.5019761
+        ]
+      },
+      "properties": {
+        "place": "Federal Reserve Bank of Cleveland: Learning Center and Money Museum",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6995481,
+          41.5060535
+        ]
+      },
+      "properties": {
+        "place": "First Energy Stadium",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.69417,
+          41.4982285
+        ]
+      },
+      "properties": {
+        "place": "Terminal Tower",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6903432,
+          41.500039
+        ]
+      },
+      "properties": {
+        "place": "Old Arcade",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.7038046,
+          41.4965393
+        ]
+      },
+      "properties": {
+        "place": "Greater Cleveland Aquarium",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.628588,
+          41.5360836
+        ]
+      },
+      "properties": {
+        "place": "Rockefeller Park Greenhouse",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.62967286780177,
+          41.53304903834984
+        ]
+      },
+      "properties": {
+        "place": "Cleveland Cultural Gardens",
+        "metro_code": "CLV",
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6923535,
+          41.5057327
+        ]
+      },
+      "properties": {
+        "place": "Free Stamp",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6961005,
+          41.4994946
+        ]
+      },
+      "properties": {
+        "place": "Public Square",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6899446,
+          41.5114652
+        ]
+      },
+      "properties": {
+        "place": "International Women's Air and Space Museum",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.853171,
+          41.399359
+        ]
+      },
+      "properties": {
+        "place": "IX Center",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6598549,
+          41.504263
+        ]
+      },
+      "properties": {
+        "place": "Children's Museum of Cleveland",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.57358563916374,
+          41.48317910903395
+        ]
+      },
+      "properties": {
+        "place": "Nature Center at Shaker Lakes",
+        "metro_code": "CLV",
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6891641,
+          41.4991235
+        ]
+      },
+      "properties": {
+        "place": "5th Street Arcade",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6443127,
+          41.5111764
+        ]
+      },
+      "properties": {
+        "place": "Baseball Heritage Museum",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.7035143,
+          41.4994715
+        ]
+      },
+      "properties": {
+        "place": "Flats East Bank",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6024146,
+          41.5104317
+        ]
+      },
+      "properties": {
+        "place": "Cleveland Institute of Art",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6899843,
+          41.498511
+        ]
+      },
+      "properties": {
+        "place": "East 4th Street",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.6269602771713,
+          41.54145133682854
+        ]
+      },
+      "properties": {
+        "place": "Cleveland Lakefront Nature Preserve",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.643191,
+          41.505211
+        ]
+      },
+      "properties": {
+        "place": "Dunham Tavern Museum",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.604643,
+          41.508915
+        ]
+      },
+      "properties": {
+        "place": "Museum of Contemporary Art",
+        "metro_code": "CLV"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.350466,
+          47.620563
+        ]
+      },
+      "properties": {
+        "place": "Chihuly Garden and Glass",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3420567,
+          47.6101359
+        ]
+      },
+      "properties": {
+        "place": "Pike Place Market",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2963839,
+          47.517993
+        ]
+      },
+      "properties": {
+        "place": "The Museum of Flight",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3492774,
+          47.6205063
+        ]
+      },
+      "properties": {
+        "place": "Space Needle",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3599224,
+          47.6294692
+        ]
+      },
+      "properties": {
+        "place": "Kerry Park",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3325085,
+          47.59140260000001
+        ]
+      },
+      "properties": {
+        "place": "Safeco Field",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3963641677463,
+          47.66673599690702
+        ]
+      },
+      "properties": {
+        "place": "Hiram M Chittenden Locks",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3317274,
+          47.6019888
+        ]
+      },
+      "properties": {
+        "place": "Smith Tower",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3035199,
+          47.65533510000001
+        ]
+      },
+      "properties": {
+        "place": "University of Washington",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3320228,
+          47.59938650000001
+        ]
+      },
+      "properties": {
+        "place": "Klondike Gold Rush National Historical Park",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3316394,
+          47.5951518
+        ]
+      },
+      "properties": {
+        "place": "CenturyLInk Field",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4065081,
+          47.65762100000001
+        ]
+      },
+      "properties": {
+        "place": "Discovery Park Environmental Learning Center",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3371302,
+          47.6270967
+        ]
+      },
+      "properties": {
+        "place": "Lake Union Park",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3535747532912,
+          47.6683448279352
+        ]
+      },
+      "properties": {
+        "place": "Woodland Park Zoo",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3343532,
+          47.6456308
+        ]
+      },
+      "properties": {
+        "place": "Gas Works Park",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3510924,
+          47.6197393
+        ]
+      },
+      "properties": {
+        "place": "Pacific Science Center",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3481245,
+          47.6214824
+        ]
+      },
+      "properties": {
+        "place": "Museum of Pop Culture",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3472603,
+          47.6509704
+        ]
+      },
+      "properties": {
+        "place": "Fremont Troll",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3425236,
+          47.6061734
+        ]
+      },
+      "properties": {
+        "place": "Seattle Great Wheel",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3429996,
+          47.607445
+        ]
+      },
+      "properties": {
+        "place": "Seattle Aquarium",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3317435,
+          47.6001321
+        ]
+      },
+      "properties": {
+        "place": "Waterfall Garden Park",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3418276,
+          47.60704
+        ]
+      },
+      "properties": {
+        "place": "Elliott Bay Waterfront",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3553101,
+          47.6165958
+        ]
+      },
+      "properties": {
+        "place": "Olympic Sculpture Park",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.301594,
+          47.6503747
+        ]
+      },
+      "properties": {
+        "place": "Husky Stadium",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3800776,
+          47.6557261
+        ]
+      },
+      "properties": {
+        "place": "Fisherman's Terminal",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3481245,
+          47.6214824
+        ]
+      },
+      "properties": {
+        "place": "Science Fiction Museum and Hall of Fame",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3369703,
+          47.6080842
+        ]
+      },
+      "properties": {
+        "place": "Benaroya Hall",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3346691,
+          47.5824616
+        ]
+      },
+      "properties": {
+        "place": "Living Computers: Museum + Labs",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.33043,
+          47.6045899
+        ]
+      },
+      "properties": {
+        "place": "Sky View Observatory",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3273296657705,
+          47.67980447618191
+        ]
+      },
+      "properties": {
+        "place": "Green Lake Park",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2972404691288,
+          47.62993702980456
+        ]
+      },
+      "properties": {
+        "place": "Washington Park Arboretum",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3325009,
+          47.6067006
+        ]
+      },
+      "properties": {
+        "place": "Seattle Public Library",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.315728,
+          47.632123
+        ]
+      },
+      "properties": {
+        "place": "Volunteer Park Conservatory",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4000004427062,
+          47.58439520864214
+        ]
+      },
+      "properties": {
+        "place": "Alki Beach",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3365807,
+          47.62761760000001
+        ]
+      },
+      "properties": {
+        "place": "Museum of History and Industry",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.322914,
+          47.598221
+        ]
+      },
+      "properties": {
+        "place": "Wing Luke Museum of the Asian Pacific American Experience",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.26628,
+          47.513156
+        ]
+      },
+      "properties": {
+        "place": "Kubota Garden",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3472355,
+          47.6230122
+        ]
+      },
+      "properties": {
+        "place": "Bill and Melinda Gates Foundation Discovery Center",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4030709163648,
+          47.69016394654169
+        ]
+      },
+      "properties": {
+        "place": "Golden Gardens Park",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3847523,
+          47.6676237
+        ]
+      },
+      "properties": {
+        "place": "Ballard Farmer's Market",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3357758,
+          47.6264842
+        ]
+      },
+      "properties": {
+        "place": "The Center for Wooden Boats",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3381331,
+          47.607309
+        ]
+      },
+      "properties": {
+        "place": "Seattle Art Museum",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3520278,
+          47.62252100000001
+        ]
+      },
+      "properties": {
+        "place": "International Fountain",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3931098872649,
+          47.53007590692787
+        ]
+      },
+      "properties": {
+        "place": "Lincoln Park",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3925072,
+          47.6684155
+        ]
+      },
+      "properties": {
+        "place": "Nordic Museum",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3240646,
+          47.6069397
+        ]
+      },
+      "properties": {
+        "place": "Frye Art Museum",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3326296,
+          47.6115429
+        ]
+      },
+      "properties": {
+        "place": "Washington State Convention Center",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3381331,
+          47.607309
+        ]
+      },
+      "properties": {
+        "place": "Seattle Asian Art Museum",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2576908895303,
+          47.54958716727009
+        ]
+      },
+      "properties": {
+        "place": "Seward Park",
+        "metro_code": "SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.385971,
+          43.642403
+        ]
+      },
+      "properties": {
+        "place": "Aquarium of Canada",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3715381,
+          43.648578
+        ]
+      },
+      "properties": {
+        "place": "St Lawrence Market",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3870568,
+          43.6425662
+        ]
+      },
+      "properties": {
+        "place": "CN Tower",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3961232,
+          43.6678782
+        ]
+      },
+      "properties": {
+        "place": "Royal Conservatory of Music",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3875905,
+          43.647356
+        ]
+      },
+      "properties": {
+        "place": "Royal Alexandra Theatre",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3849711,
+          43.6460801
+        ]
+      },
+      "properties": {
+        "place": "Toronto Symphony Orchestra",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.385277,
+          43.640854
+        ]
+      },
+      "properties": {
+        "place": "Steam Whistle Brewery",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3857232,
+          43.6133531
+        ]
+      },
+      "properties": {
+        "place": "Toronto Island Park",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3866865,
+          43.6719053
+        ]
+      },
+      "properties": {
+        "place": "Toronto Public Library",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.46504238219708,
+          43.65299352650928
+        ]
+      },
+      "properties": {
+        "place": "High Park",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3794054,
+          43.6552521
+        ]
+      },
+      "properties": {
+        "place": "Ed Mirvish Theatre",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3856234,
+          43.6505809
+        ]
+      },
+      "properties": {
+        "place": "Four Seasons Centre for the Performing Arts",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3925123,
+          43.6536066
+        ]
+      },
+      "properties": {
+        "place": "The AGO, Art Gallery of Ontario",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3956564,
+          43.6628917
+        ]
+      },
+      "properties": {
+        "place": "University of Toronto",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3776902,
+          43.6472722
+        ]
+      },
+      "properties": {
+        "place": "Hockey Hall of Fame",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3947771,
+          43.6677097
+        ]
+      },
+      "properties": {
+        "place": "Royal Ontario Museum",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.389154,
+          43.6468156
+        ]
+      },
+      "properties": {
+        "place": "Princess of Wales Theatre",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3792955,
+          43.6530329
+        ]
+      },
+      "properties": {
+        "place": "The Elgin and Winter Garden Theatre Centre",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3790989,
+          43.6434661
+        ]
+      },
+      "properties": {
+        "place": "The Air Canada Centre",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3598728,
+          43.7335274
+        ]
+      },
+      "properties": {
+        "place": "Edwards Gardens",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4081472,
+          43.6789935
+        ]
+      },
+      "properties": {
+        "place": "Spadina Museum",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3904082,
+          43.6465295
+        ]
+      },
+      "properties": {
+        "place": "TIFF Bell Lightbox",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3322955,
+          43.7251002
+        ]
+      },
+      "properties": {
+        "place": "Aga Khan Museum",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3893532,
+          43.6414378
+        ]
+      },
+      "properties": {
+        "place": "Rogers Centre",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3789371,
+          43.6405521
+        ]
+      },
+      "properties": {
+        "place": "Toronto Harbour",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4094439,
+          43.6780371
+        ]
+      },
+      "properties": {
+        "place": "Casa Loma",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.400166,
+          43.6672426
+        ]
+      },
+      "properties": {
+        "place": "Bata Shoe Museum",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3746818,
+          43.6617585
+        ]
+      },
+      "properties": {
+        "place": "Allan Gardens Conservatory",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.37376,
+          43.650329
+        ]
+      },
+      "properties": {
+        "place": "St James Anglican Cathedral",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3817017,
+          43.6526301
+        ]
+      },
+      "properties": {
+        "place": "Old City Hall",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3818785,
+          43.638834
+        ]
+      },
+      "properties": {
+        "place": "Harbourfront Centre",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.379022,
+          43.654174
+        ]
+      },
+      "properties": {
+        "place": "Massey Hall",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3806994,
+          43.6544382
+        ]
+      },
+      "properties": {
+        "place": "CF Toronto Eaton Centre",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.516934,
+          43.773369
+        ]
+      },
+      "properties": {
+        "place": "Black Creek Pioneer Village",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3263744,
+          43.6313695
+        ]
+      },
+      "properties": {
+        "place": "Tommy Thompson Park",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.18065181979917,
+          43.82046095076188
+        ]
+      },
+      "properties": {
+        "place": "Toronto Zoo",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.383461,
+          43.696196
+        ]
+      },
+      "properties": {
+        "place": "Mount Pleasant Cemetary",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.386056,
+          43.647007
+        ]
+      },
+      "properties": {
+        "place": "Roy Thompson Hall",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.386789,
+          43.643829
+        ]
+      },
+      "properties": {
+        "place": "Metro Toronto Convention Centre",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4521064,
+          43.7254216
+        ]
+      },
+      "properties": {
+        "place": "Yorkdale Shopping Centre",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3773382,
+          43.646887
+        ]
+      },
+      "properties": {
+        "place": "Brookfield Place",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3212058,
+          43.6837565
+        ]
+      },
+      "properties": {
+        "place": "Greektown on the Danforth",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.2329784,
+          43.7098072
+        ]
+      },
+      "properties": {
+        "place": "Bluffers Park",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3974809,
+          43.6518338
+        ]
+      },
+      "properties": {
+        "place": "Kensington Market and Spadina Avenue",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3923284,
+          43.6643658
+        ]
+      },
+      "properties": {
+        "place": "Queen's Park",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3946545,
+          43.6369271
+        ]
+      },
+      "properties": {
+        "place": "Toronto Music Garden",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3391838,
+          43.7164069
+        ]
+      },
+      "properties": {
+        "place": "Ontario Science Centre",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3931642,
+          43.6681225
+        ]
+      },
+      "properties": {
+        "place": "Gardiner Museum",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4065477,
+          43.6373362
+        ]
+      },
+      "properties": {
+        "place": "Fort York National Historic Site",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.41641277599827,
+          43.63581972838431
+        ]
+      },
+      "properties": {
+        "place": "Canadian National Exhibition",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.35958,
+          43.6503055
+        ]
+      },
+      "properties": {
+        "place": "The Distillery Historic District",
+        "metro_code": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.050176,
+          38.8892686
+        ]
+      },
+      "properties": {
+        "place": "Lincoln Memorial",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0477897,
+          38.8878219
+        ]
+      },
+      "properties": {
+        "place": "Korean War Veterans Memorial",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0477132,
+          38.8912933
+        ]
+      },
+      "properties": {
+        "place": "Vietnam Veterans Memorial",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0326074,
+          38.8867076
+        ]
+      },
+      "properties": {
+        "place": "United States Holocaust Museum",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0260654,
+          38.8912662
+        ]
+      },
+      "properties": {
+        "place": "Smithsonian National Museum of Natural History",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.019965,
+          38.891298
+        ]
+      },
+      "properties": {
+        "place": "National Gallery of Art",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0526236,
+          38.9436485
+        ]
+      },
+      "properties": {
+        "place": "Hillwood Estate, Museum and Gardens",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0006569,
+          38.9333675
+        ]
+      },
+      "properties": {
+        "place": "Basilica of the National Shrine of the Immaculate Conception",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.032614,
+          38.8910644
+        ]
+      },
+      "properties": {
+        "place": "National Museum of African American History and Culture",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.004719,
+          38.888684
+        ]
+      },
+      "properties": {
+        "place": "Library of Congress",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0230529,
+          38.8978692
+        ]
+      },
+      "properties": {
+        "place": "National Portrait Gallery",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0192849,
+          38.8930396
+        ]
+      },
+      "properties": {
+        "place": "Newseum",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0404978,
+          38.8894206
+        ]
+      },
+      "properties": {
+        "place": "National World War II Memorial",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0429536,
+          38.8834579
+        ]
+      },
+      "properties": {
+        "place": "Franklin Delano Roosevelt Memorial",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0229772,
+          38.8896198
+        ]
+      },
+      "properties": {
+        "place": "National Mall",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0707808,
+          38.9305946
+        ]
+      },
+      "properties": {
+        "place": "Washington National Cathedral",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0442344,
+          38.8862302
+        ]
+      },
+      "properties": {
+        "place": "Martin Luther King, Jr Memorial",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0364536,
+          38.8813806
+        ]
+      },
+      "properties": {
+        "place": "Jefferson Memorial",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0469117,
+          38.911759
+        ]
+      },
+      "properties": {
+        "place": "The Phillips Collection",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0229419,
+          38.8978609
+        ]
+      },
+      "properties": {
+        "place": "Smithsonian American Art Museum",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0090505,
+          38.8899389
+        ]
+      },
+      "properties": {
+        "place": "US Capitol",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0556827,
+          38.8958482
+        ]
+      },
+      "properties": {
+        "place": "John F Kennedy Center for the Performing Arts",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.999525,
+          38.8860434
+        ]
+      },
+      "properties": {
+        "place": "Capitol Hill",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0390322,
+          38.8991402
+        ]
+      },
+      "properties": {
+        "place": "Renwick Gallery",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0128833,
+          38.8881451
+        ]
+      },
+      "properties": {
+        "place": "United States Botanic Garden",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0176053,
+          38.8966627
+        ]
+      },
+      "properties": {
+        "place": "National Law Enforcement Officers Memorial",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0256687,
+          38.89667
+        ]
+      },
+      "properties": {
+        "place": "Ford's Theatre",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0640129,
+          38.914148
+        ]
+      },
+      "properties": {
+        "place": "Dumbarton Oaks",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.96950432684572,
+          38.91253054912097
+        ]
+      },
+      "properties": {
+        "place": "US National Arboretum",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0082378,
+          38.8980972
+        ]
+      },
+      "properties": {
+        "place": "National Postal Museum",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.022939,
+          38.8925589
+        ]
+      },
+      "properties": {
+        "place": "The National Archives Museum",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.018681,
+          38.8942162
+        ]
+      },
+      "properties": {
+        "place": "Supreme Court",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.051678,
+          38.91391
+        ]
+      },
+      "properties": {
+        "place": "The President Woodrow Wilson House",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0263539,
+          38.8879405
+        ]
+      },
+      "properties": {
+        "place": "Smithsonian Institution Freer Gallery of Art and Arthur M Sackler Gallery",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0477045,
+          38.9107011
+        ]
+      },
+      "properties": {
+        "place": "Anderson House",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0399365,
+          38.8941568
+        ]
+      },
+      "properties": {
+        "place": "DAR Museum",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.04879298620948,
+          38.93480995684813
+        ]
+      },
+      "properties": {
+        "place": "Rock Creek Park",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0352791,
+          38.8894838
+        ]
+      },
+      "properties": {
+        "place": "Washington Monument",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0117806,
+          38.9417167
+        ]
+      },
+      "properties": {
+        "place": "President Lincoln's Cottage",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0027549,
+          38.8893719
+        ]
+      },
+      "properties": {
+        "place": "Folger Shakespeare Library",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0704152,
+          38.9043851
+        ]
+      },
+      "properties": {
+        "place": "Georgetown University",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0300509,
+          38.8912793
+        ]
+      },
+      "properties": {
+        "place": "National Museum of American History",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0201292,
+          38.8773399
+        ]
+      },
+      "properties": {
+        "place": "Arena Stage",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0074329,
+          38.8730102
+        ]
+      },
+      "properties": {
+        "place": "Nationals Park",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0198679,
+          38.8881601
+        ]
+      },
+      "properties": {
+        "place": "Smithsonian National Air and Space Museum",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.99889390416133,
+          38.90740287936799
+        ]
+      },
+      "properties": {
+        "place": "Union Market",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9945183,
+          38.8794866
+        ]
+      },
+      "properties": {
+        "place": "Marine Barracks Washington, 8th and I",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0629013,
+          38.911493
+        ]
+      },
+      "properties": {
+        "place": "Tudor Place",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.05396381153695,
+          38.93033505962627
+        ]
+      },
+      "properties": {
+        "place": "National Zoological Park",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0365298,
+          38.8976763
+        ]
+      },
+      "properties": {
+        "place": "White House",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0229551,
+          38.8941194
+        ]
+      },
+      "properties": {
+        "place": "US Navy Memorial and Naval Heritage Center",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.025507,
+          38.8879326
+        ]
+      },
+      "properties": {
+        "place": "National Museum of African Art",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0229934,
+          38.9048838
+        ]
+      },
+      "properties": {
+        "place": "Walter E Washington Convention Center",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0607956,
+          38.9195693
+        ]
+      },
+      "properties": {
+        "place": "Embassy Row",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0259733,
+          38.8881683
+        ]
+      },
+      "properties": {
+        "place": "Enid A Haupt Garden",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0208804,
+          38.8981251
+        ]
+      },
+      "properties": {
+        "place": "Capitol One Arena",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0236171,
+          38.896945
+        ]
+      },
+      "properties": {
+        "place": "International Spy Museum",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0229682,
+          38.8881608
+        ]
+      },
+      "properties": {
+        "place": "Hishhorn Museum and Sculpture Garden",
+        "metro_code": "WAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9418223,
+          38.912596
+        ]
+      },
+      "properties": {
+        "place": "Keniworth Park and Aquatic Gardens",
+        "metro_code": "WAS"
+      }
+    }
+  ]
+}

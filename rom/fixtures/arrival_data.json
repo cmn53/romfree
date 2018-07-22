@@ -1,0 +1,138 @@
+[
+  {
+    "metro_code": "CLV",
+    "name": "Cleveland Hopkins International Airport",
+    "location": {
+      "longitude": -81.836652,
+      "latitude": 41.410679
+    }
+  },
+  {
+    "metro_code": "CLV",
+    "name": "Burke Lakefront Airport",
+    "location": {
+      "longitude": -81.689877,
+      "latitude": 41.511541
+    }
+  },
+  {
+    "metro_code": "CLV",
+    "name": "Cleveland Amtrak Station",
+    "location": {
+      "longitude": -81.696531,
+      "latitude": 41.505656
+    }
+  },
+  {
+    "metro_code": "CLV",
+    "name": "Cleveland Greyhound Station",
+    "location": {
+      "longitude": -81.682236,
+      "latitude": 41.503446
+    }
+  },
+  {
+    "metro_code": "CLV",
+    "name": "Stephanie Tubbs Jones Transit Center",
+    "location": {
+      "longitude": -81.674874,
+      "latitude": 41.499890
+    }
+  },
+  {
+    "metro_code": "SEA",
+    "name": "Seattle Tacoma International Airport",
+    "location": {
+      "longitude": -122.297023,
+      "latitude": 47.445356
+    }
+  },
+  {
+    "metro_code": "SEA",
+    "name": "Boeing Field King County International Airport",
+    "location": {
+      "longitude": -122.303753,
+      "latitude": 47.536744
+    }
+  },
+  {
+    "metro_code": "SEA",
+    "name": "King Street Station",
+    "location": {
+      "longitude": -122.329907,
+      "latitude": 47.598391
+    }
+  },
+  {
+    "metro_code": "SEA",
+    "name": "Seattle Greyhound Bus Terminal",
+    "location": {
+      "longitude": -122.326131,
+      "latitude": 47.591937
+    }
+  },
+  {
+    "metro_code": "SEA",
+    "name": "Seattle Ferry Terminal",
+    "location": {
+      "longitude": -122.337929,
+      "latitude": 47.602890
+    }
+  },
+  {
+    "metro_code": "ON",
+    "name": "Toronto Pearson International Airport",
+    "location": {
+      "longitude": -79.620165,
+      "latitude": 43.685947
+    }
+  },
+  {
+    "metro_code": "ON",
+    "name": "Billy Bishop Toronto City Airport",
+    "location": {
+      "longitude": -79.396296,
+      "latitude": 43.632254
+    }
+  },
+  {
+    "metro_code": "ON",
+    "name": "Union Station",
+    "location": {
+      "longitude": -79.380606,
+      "latitude": 43.645240
+    }
+  },
+  {
+    "metro_code": "ON",
+    "name": "Toronto Coach Terminal",
+    "location": {
+      "longitude": -79.384217,
+      "latitude": 43.656163
+    }
+  },
+  {
+    "metro_code": "WAS",
+    "name": "Ronald Reagan Washington National Airport",
+    "location": {
+      "longitude": -77.044076,
+      "latitude": 38.853604
+    }
+  },
+  {
+    "metro_code": "WAS",
+    "name": "Dulles International Airport",
+    "location": {
+      "longitude": -77.447841,
+      "latitude": 38.953002
+    }
+  },
+  {
+    "metro_code": "WAS",
+    "name": "Union Station",
+    "location": {
+      "longitude": -77.006088,
+      "latitude": 38.897773
+    }
+  }
+]
