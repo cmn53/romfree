@@ -117,7 +117,7 @@ class Hotel(models.Model):
             )
             print("Finished number crunching for hotel %s" %h.id)
 
-        with open('rom/static/data/score_data.json', 'w') as f:
+        with open('rom/fixtures/score_data.json', 'w') as f:
             json.dump(hotel_scores, f)
 
         return "Successfully wrote scoring data to file"

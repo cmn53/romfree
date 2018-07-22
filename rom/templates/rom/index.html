@@ -1,0 +1,16 @@
+{% extends 'rom/base.html' %}
+{% block content %}
+
+  <h2>Find a hotel. Leave the rental car behind.</h2>
+
+  {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+    <form action="" method="post">
+      {% csrf_token %}
+      <table>
+        {{ form.as_table }}
+      </table>
+      <input type="submit" value="Search"></input>
+    </form>
+
+{% endblock %}
