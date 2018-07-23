@@ -11,6 +11,13 @@ from .arrival import Arrival
 from .destination import Destination
 import json
 
+class HotelDestination(models.Model):
+    hotel = models.ForeignKey('Hotel', on_delete=models.CASCADE)
+    destination = models.ForeignKey(Destination, on_delete=models.CASCADE)
+    distance = models.FloatField()
+    mode = models.CharField(max_length=50)
+
+
 class HotelArrival(models.Model):
     hotel = models.ForeignKey('Hotel', on_delete=models.CASCADE)
     arrival = models.ForeignKey(Arrival, on_delete=models.CASCADE)
@@ -72,6 +79,7 @@ class Hotel(models.Model):
     postal_code = models.CharField(max_length=20, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     arrivals = models.ManyToManyField(Arrival, through=HotelArrival, through_fields=('hotel', 'arrival'),)
+    destinations = models.ManyToManyField(Destination, through=HotelDestination, through_fields=('hotel', 'destination'),)
 
     def __str__(self):
         return self.name

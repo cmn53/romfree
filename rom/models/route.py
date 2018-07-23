@@ -22,7 +22,3 @@ class Route(models.Model):
     def operates_on_sun(self):
         sun_trips = self.pattern_set.aggregate(Sum("su_trips"))
         return sun_trips["su_trips__sum"] > 0
-
-    def is_frequent(self):
-        core_trips = self.pattern_set.aggregate(Sum("core_trips"))
-        return self.operates_on_sat() and self.operates_on_sun() and core_trips > 114
