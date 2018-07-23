@@ -10,6 +10,7 @@ class Route(models.Model):
     vehicle_type = models.CharField(max_length=50, blank=True, null=True)
     color = models.CharField(max_length=6, blank=True, null=True)
     geom = models.MultiLineStringField(spatial_index=True)
+    frequent = models.BooleanField(default=False)
 
     def __str__(self):
         return "%s Route %s" %(self.operator.name, self.name)

@@ -53,16 +53,6 @@
 
   </script>
 
-  <ul>
-  {% for hotel in hotels %}
-    <li>
-      <img src="http://photos.hotelbeds.com/giata/{{ hotel.hotel.image_set.first }}" alt="hotel stock image"/>
-      <div>{{ hotel.hotel.name }}</div>
-      <div>Score: {{ hotel.total_qtr_score }}</div>
-    </li>
-  {% endfor %}
-  </ul>
-
   <div class="pagination">
     <span class="step-links">
         {% if hotels.has_previous %}
@@ -80,5 +70,17 @@
         {% endif %}
     </span>
 </div>
+
+  <ul>
+  {% for hotel in hotels %}
+    <li>
+      <img src="http://photos.hotelbeds.com/giata/{{ hotel.hotel.image_set.first }}" alt="hotel stock image"/>
+      <div>{{ hotel.hotel.name }}</div>
+      <div>Score: {{ hotel.total_qtr_score }}</div>
+    </li>
+  {% endfor %}
+  </ul>
+
+
 
 {% endblock %}
