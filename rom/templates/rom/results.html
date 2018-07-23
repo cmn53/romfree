@@ -1,7 +1,7 @@
 {% extends 'rom/base.html' %}
 {% block content %}
 
-  <h2>{{ metro }} Hotels</h2>
+  <h2>Hotels</h2>
   <div id="map"></div>
 
   <script type="text/javascript">
@@ -12,8 +12,10 @@
         attribution: '&copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
       }).addTo(map);
 
-    let hotelData = {{ geojson|safe|escape }};
-    let routeData = {{ routes|safe|escape }};
+    let hotelData = {{ hotel_geojson|safe|escape }};
+    let routeData = {{ route_geojson|safe|escape }};
+    let destinationData = {{ destination_geojson|safe|escape }};
+
     L.geoJson(routeData).addTo(map);
 
     // let myIcon = L.AwesomeMarkers.icon({
@@ -22,17 +24,18 @@
     //   icon: 'coffee' //http://fortawesome.github.io/Font-Awesome/icons/
     // });
     //
-    // let hotels = L.geoJson(data, {
-    //   pointToLayer: function(feature, latlng) {
-    //       return L.marker(latlng, {
-    //           icon: myIcon
-    //       })
-    //   }
-    // }).addTo(map);
+    let destinationLayer = L.geoJson(destinationData, {
+      pointToLayer: function(feature, latlng) {
+          return L.circleMarker(latlng, {
+            color: '#A9A9A9',
+            weight: 1,
+            fillColor: '#808080',
+            fillOpacity: 1,
+            radius: 3
+          })
+      }
+    }).addTo(map);
 
-    // let hotelLayer = L.geoJSON().addTo(map);
-    // hotelLayer.addData(geojson);
-    console.log(routeData)
 
     let hotelLayer = L.geoJSON(hotelData, {
       pointToLayer: function(feature, latlng) {
@@ -42,16 +45,40 @@
             glyph: feature.properties.score
           })
         })
+      },
+      onEachFeature: function (feature, layer) {
+        layer.bindPopup('<h4>'+feature.properties.name+'</h4>')
       }
     }).addTo(map);
+
   </script>
+
   <ul>
-  {% for name, score in sorted_hotels.items %}
+  {% for hotel in hotels %}
     <li>
-      <div>{{ name }}</div>
-      <div>Score: {{ score }}</div>
+      <img src="http://photos.hotelbeds.com/giata/{{ hotel.hotel.image_set.first }}" alt="hotel stock image"/>
+      <div>{{ hotel.hotel.name }}</div>
+      <div>Score: {{ hotel.total_qtr_score }}</div>
     </li>
   {% endfor %}
   </ul>
+
+  <div class="pagination">
+    <span class="step-links">
+        {% if hotels.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ hotels.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ hotels.number }} of {{ hotels.paginator.num_pages }}.
+        </span>
+
+        {% if hotels.has_next %}
+            <a href="?page={{ hotels.next_page_number }}">next</a>
+            <a href="?page={{ hotels.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
 
 {% endblock %}

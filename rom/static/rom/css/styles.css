@@ -1,0 +1,23 @@
+h1, h2, h3, nav {
+  font-family: 'Arimo', sans-serif;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+nav > div {
+  font-size: 1rem;
+  padding: 0 20px;
+}
+
+#map {
+  height: 400px;
+}
+
+
+.leaflet-marker-icon {
+	font-weight: bold;
+	font-family: sans-serif;
+}

@@ -18,6 +18,17 @@ class HotelArrival(models.Model):
     qtr_arrival_score = models.FloatField(default=0)
     half_arrival_score = models.FloatField(default=0)
 
+    class Meta:
+        ordering = ['-hotel__score__qtr_static_score', '-qtr_arrival_score']
+
+    @property
+    def total_qtr_score(self):
+        return int(self.hotel.score.qtr_static_score + self.qtr_arrival_score)
+
+    @property
+    def total_half_score(self):
+        return int(self.hotel.score.half_static_score + self.half_arrival_score)
+
     @classmethod
     def load_qtr_arrival_scores(cls):
         for ha in HotelArrival.objects.all():
@@ -47,6 +58,9 @@ class HotelArrival(models.Model):
         else:
             ha.half_arrival_score = 0
         ha.save()
+
+
+
 
 class Hotel(models.Model):
     hotel_code = models.IntegerField()

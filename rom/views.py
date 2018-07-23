@@ -2,12 +2,11 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.core.serializers import serialize
-
-from .models import Arrival, Hotel, Metro, Route, Score
+from django.db.models import F, Sum
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
+from .models import Arrival, Hotel, HotelArrival, Metro, Route, Score, Destination
 from .forms import SearchForm
-
-from collections import OrderedDict
-from operator import itemgetter
+import json
 
 
 def index(request):
@@ -29,31 +28,62 @@ def index(request):
         form = SearchForm()
     return render(request, 'rom/index.html', {'form': form})
 
+
 def results(request, metro_id, arrival_id):
     metro = get_object_or_404(Metro, pk=metro_id)
+    arrival = get_object_or_404(Arrival, pk=arrival_id)
     map_center = [metro.centroid.coords[1], metro.centroid.coords[0]]
-    routes = Route.objects.filter(operator__metro=metro)
-    hotels = Hotel.objects.filter(metro=metro)
-    hotel_scores = {}
-    hotel_images = {}
-    for h in hotels:
-        hotel_scores[h.name] = round(h.score.qtr_score(arrival_id))
-        hotel_images[h.name] = h.image_set.first()
-    sorted_hotels = OrderedDict(sorted(hotel_scores.items(), key=itemgetter(1), reverse=True))
 
-    #sorted_hotels = sorted(hotel_scores.items(), key=lambda x:x[1], reverse=True)
-    #sorted_hotels = sorted(hotels, key= lambda t: t.score.qtr_score(arrival_id), reverse=True)
-    geojson = serialize('geojson', hotels,
-        geometry_field='geom', fields=('name','hotel.score.qtr_trips',))
+    routes = Route.objects.filter(operator__metro=metro).exclude(vehicle_type="ferry")
+    destinations = Destination.objects.filter(metro=metro)
+    hotel_arrival_set = HotelArrival.objects.filter(hotel__metro=metro, arrival=arrival)
 
-    routes_geojson = serialize('geojson', routes, geometry_field='geom', fields = ('name', 'color', 'vehicle_type',))
+    paginator = Paginator(hotel_arrival_set, 20)
+    page = request.GET.get('page')
+    paginated_hotels = paginator.get_page(page)
+
+    hotel_list = []
+    i = (int(page)-1) * 20
+    for h in hotel_arrival_set[i:i+20]:
+        hotel_list.append(
+            {
+                "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [h.hotel.geom.coords[0], h.hotel.geom.coords[1]]
+                    },
+                    "properties": {
+                        "order": len(hotel_list),
+                        "name": h.hotel.name,
+                        "score": h.total_qtr_score
+                    }
+            }
+        )
+    hotel_geojson = json.dumps(hotel_list)
+
+    route_geojson = serialize(
+        'geojson',
+        routes,
+        geometry_field='geom',
+        fields=('name', 'vehicle_type',)
+    )
+
+    destination_geojson = serialize(
+        'geojson',
+        destinations,
+        geometry_field='geom',
+        fields=('name',)
+    )
+
+
+
     context = {
         'metro': metro,
         'map_center': map_center,
-        'sorted_hotels': sorted_hotels,
-        'hotel_images': hotel_images,
-        'geojson': geojson,
-        'routes': routes_geojson
+        'hotels': paginated_hotels,
+        'hotel_geojson': hotel_geojson,
+        'route_geojson': route_geojson,
+        'destination_geojson': destination_geojson
     }
 
     return render(request, 'rom/results.html', context)

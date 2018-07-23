@@ -1,10 +1,12 @@
-h2 {
-  color: green;
+h1, h2, h3 {
+  font-family: 'Arimo', sans-serif;
+  color: #0ff;
 }
 
 #map {
   height: 400px;
 }
+
 
 .leaflet-marker-icon {
 	font-weight: bold;
