@@ -20,17 +20,18 @@ def index(request):
             check_in = form.cleaned_data['check_in']
             check_out = form.cleaned_data['check_out']
 
-            metro_id = Metro.objects.get(name=metro).id
+            metro_code = Metro.objects.get(name=metro).metro_code
             arrival_id = Arrival.objects.get(name=arrival).id
+            page = request.GET.get('page')
             #return render(request, 'rom/results.html', {'form': form, 'search_result': search_result})
-            return HttpResponseRedirect(reverse('rom:results', args=(metro_id,arrival_id,)))
+            return HttpResponseRedirect(reverse('rom:results', args=(metro_code,arrival_id,),)+'?page=1')
     else:
         form = SearchForm()
     return render(request, 'rom/index.html', {'form': form})
 
 
-def results(request, metro_id, arrival_id):
-    metro = get_object_or_404(Metro, pk=metro_id)
+def results(request, metro_code, arrival_id):
+    metro = get_object_or_404(Metro, metro_code=metro_code)
     arrival = get_object_or_404(Arrival, pk=arrival_id)
     map_center = [metro.centroid.coords[1], metro.centroid.coords[0]]
 
@@ -40,6 +41,13 @@ def results(request, metro_id, arrival_id):
 
     paginator = Paginator(hotel_arrival_set, 20)
     page = request.GET.get('page')
+
+
+
+
+
+
+
     paginated_hotels = paginator.get_page(page)
 
     hotel_list = []
@@ -65,7 +73,7 @@ def results(request, metro_id, arrival_id):
         'geojson',
         routes,
         geometry_field='geom',
-        fields=('name', 'vehicle_type',)
+        fields=('name', 'vehicle_type', 'frequency',)
     )
 
     destination_geojson = serialize(
@@ -74,8 +82,6 @@ def results(request, metro_id, arrival_id):
         geometry_field='geom',
         fields=('name',)
     )
-
-
 
     context = {
         'metro': metro,
@@ -91,4 +97,33 @@ def results(request, metro_id, arrival_id):
 
 def detail(request, hotel_id):
     hotel = get_object_or_404(Hotel, pk=hotel_id)
-    return render(request, 'rom/detail.html', {'hotel': hotel})
+    destinations = Destination.objects.filter(metro=hotel.metro)
+    # hotel_destination_set = HotelDestination.objects.filter(hotel=hotel)
+
+    routes = hotel.nearby_routes(0.25)
+    frequent_routes = routes.filter(frequent=True)
+    other_routes = routes.filter(frequent=False)
+
+    hotel_dict = {
+        "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [hotel.geom.coords[0], hotel.geom.coords[1]]
+            },
+            "properties": {
+                "name": hotel.name,
+            }
+    }
+    hotel_geojson = json.dumps(hotel_dict)
+    route_geojson = serialize('geojson', routes, geometry_field='geom', fields=('name', 'vehicle_type', 'frequency',))
+    destination_geojson = serialize('geojson', destinations, geometry_field='geom', fields=('name',))
+
+    context = {
+        'hotel': hotel,
+        'frequent_routes': frequent_routes,
+        'other_routes': other_routes,
+        'hotel_geojson': hotel_geojson,
+        'route_geojson': route_geojson,
+        'destination_geojson': destination_geojson
+    }
+    return render(request, 'rom/detail.html', context)

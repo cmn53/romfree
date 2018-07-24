@@ -17,6 +17,20 @@ class HotelDestination(models.Model):
     distance = models.FloatField()
     mode = models.CharField(max_length=50)
 
+    @classmethod
+    def load_modes(cls):
+        for hd in HotelDestination.objects.all():
+            destination_patterns = hd.destination.nearby_patterns(0.25)
+            hotel_patterns = hd.hotel.nearby_patterns(0.25)
+
+            if hd.distance < 0.5:
+                hd.mode = "walking"
+            elif destination_patterns.filter(pk__in=hotel_patterns):
+                hd.mode = "transit"
+            else:
+                hd.mode = "other"
+            hd.save()
+
 
 class HotelArrival(models.Model):
     hotel = models.ForeignKey('Hotel', on_delete=models.CASCADE)
@@ -93,11 +107,10 @@ class Hotel(models.Model):
         patterns = Pattern.objects.filter(stops__in=stops).distinct()
         return patterns
 
-    # may not even need this one for the score?
-    # def nearby_routes(self):
-    #     patterns = self.nearby_patterns()
-    #     routes = Route.objects.filter(pattern__in=patterns).distinct()
-    #     return routes
+    def nearby_routes(self, radius):
+        patterns = self.nearby_patterns(radius)
+        routes = Route.objects.filter(pattern__in=patterns).distinct()
+        return routes
 
     def get_weekly_trips(self, radius):
         patterns = self.nearby_patterns(radius)

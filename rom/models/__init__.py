@@ -9,3 +9,4 @@ from .arrival import Arrival
 from .destination import Destination
 from .score import Score
 from .hotel import HotelArrival
+from .hotel import HotelDestination

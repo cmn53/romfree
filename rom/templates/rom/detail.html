@@ -1,6 +1,85 @@
 {% extends 'rom/base.html' %}
 {% block content %}
 
-{{ hotel }}
+<h2>{{ hotel.name }}</h2>
+<h3>{{ hotel.address }} {{ hotel.city }} {{ hotel.zip }}</h3>
+<p>{{ hotel.description}}</p>
 
+{% if frequent_routes %}
+  <h3>Frequent Routes Serving Hotel:</h3>
+    <ul>
+      {% for route in frequent_routes %}
+        <li>
+            {% if route.vehicle_type == "bus" %}<i class="fa fa-bus"></i>{% endif %}
+            {% if route.vehicle_type == "metro" or route.vehicle_type == "tram" or route.vehicle_type == "rail" %}<i class="fa fa-subway"></i>{% endif %}
+            {% if route.operator.short_name %}
+              {{ route.operator.short_name }} Route {{ route.name }}
+            {% else %}
+              {{ route.operator.name }} Route {{ route.name }}
+            {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+{% endif %}
+
+{% if frequent_routes %}
+  <h3>Other Nearby Routes Serving Hotel:</h3>
+    <ul>
+      {% for route in other_routes %}
+        <li>
+          {% if route.vehicle_type == "bus" %}<i class="fa fa-bus"></i>{% endif %}
+          {% if route.vehicle_type == "metro" or route.vehicle_type == "tram" or route.vehicle_type == "rail" %}<i class="fa fa-subway"></i>{% endif %}
+          {% if route.operator.short_name %}
+            {{ route.operator.short_name }} Route {{ route.name }}
+          {% else %}
+            {{ route.operator.name }} Route {{ route.name }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+{% endif %}
+<div id="detailMap"></div>
+
+<script type="text/javascript">
+  let map = L.map('detailMap');
+
+  L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}{r}.png',
+    {
+      attribution: '&copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+    }).addTo(detailMap);
+
+  let hotelData = {{ hotel_geojson|safe|escape }};
+  let routeData = {{ route_geojson|safe|escape }};
+  let destinationData = {{ destination_geojson|safe|escape }};
+
+  L.geoJson(routeData).addTo(detailMap);
+
+  let destinationLayer = L.geoJson(destinationData, {
+    pointToLayer: function(feature, latlng) {
+        return L.circleMarker(latlng, {
+          color: '#A9A9A9',
+          weight: 1,
+          fillColor: '#808080',
+          fillOpacity: 1,
+          radius: 3
+        })
+    }
+  }).addTo(detailMap);
+
+
+  let hotelLayer = L.geoJSON(hotelData, {
+    pointToLayer: function(feature, latlng) {
+      return L.marker(latlng, {
+          icon: L.icon.glyph({
+          prefix: '',
+          glyph: feature.properties.score
+        })
+      })
+    },
+    onEachFeature: function (feature, layer) {
+      layer.bindPopup('<h4>'+feature.properties.name+'</h4>')
+    }
+  }).addTo(map);
+
+</script>
 {% endblock %}
