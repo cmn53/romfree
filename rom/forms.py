@@ -10,8 +10,8 @@ from .models import Metro, Arrival, Hotel
 class SearchForm(forms.Form):
     city = forms.ModelChoiceField(queryset=Metro.objects.all())
     arrival = forms.ModelChoiceField(queryset=Arrival.objects.all())
-    check_in = forms.DateField(widget=forms.widgets.DateInput(attrs={'type':'date'}))
-    check_out = forms.DateField(widget=forms.widgets.DateInput(attrs={'type':'date'}))
+    # check_in = forms.DateField(widget=forms.widgets.DateInput(attrs={'type':'date'}))
+    # check_out = forms.DateField(widget=forms.widgets.DateInput(attrs={'type':'date'}))
 
     def __init__(self, *args, **kwargs):
         super(SearchForm, self).__init__(*args, **kwargs)

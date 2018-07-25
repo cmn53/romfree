@@ -17,8 +17,8 @@ def index(request):
 
             metro = form.cleaned_data['city']
             arrival = form.cleaned_data['arrival']
-            check_in = form.cleaned_data['check_in']
-            check_out = form.cleaned_data['check_out']
+            # check_in = form.cleaned_data['check_in']
+            # check_out = form.cleaned_data['check_out']
 
             metro_code = Metro.objects.get(name=metro).metro_code
             arrival_id = Arrival.objects.get(name=arrival).id

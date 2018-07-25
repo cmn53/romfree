@@ -2,7 +2,9 @@
 {% load static %}
 {% block content %}
 
-  <h2>{{metro}} Hotels</h2>
+  <div class="page-title">
+    <h2>Transit Access Scores for {{metro}} Area Hotels</h2>
+  </div>
 
   <div class="results-container">
     <div class="map-container">
@@ -39,7 +41,7 @@
           {% endif %}
 
           <span class="current">
-            Page {{ hotels.number }} of {{ hotels.paginator.num_pages }}.
+            Page {{ hotels.number }} of {{ hotels.paginator.num_pages }}
           </span>
 
           {% if hotels.has_next %}

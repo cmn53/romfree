@@ -18,37 +18,54 @@
       <a class="nav-item nav-link" id="nav-destinations-tab" data-toggle="tab" href="#nav-destinations" role="tab" aria-controls="nav-destinations" aria-selected="false">DESTINATIONS</a>
     </div>
   </div>
+
   <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
       <p>{{ hotel.description}}</p>
     </div>
+
     <div class="tab-pane fade" id="nav-photos" role="tabpanel" aria-labelledby="nav-photos-tab">
       {% for image in hotel.image_set.all %}
         <img src="http://photos.hotelbeds.com/giata/{{ image }}" alt="hotel stock image"/>
       {% endfor %}
     </div>
+
     <div class="tab-pane fade" id="nav-service" role="tabpanel" aria-labelledby="nav-service-tab">
-      {% if frequent_routes %}
-        <h3>Frequent Routes Serving Hotel:</h3>
-          <ul>
-            {% for route in frequent_routes %}
+      <section id="routes">
+        {% if frequent_routes %}
+          <div>
+            <h4>Frequent Routes Serving Hotel:</h4>
+            <ul>
+              {% for route in frequent_routes %}
               <li>
-                  {% if route.vehicle_type == "bus" %}<i class="fa fa-bus"></i>{% endif %}
-                  {% if route.vehicle_type == "metro" or route.vehicle_type == "tram" or route.vehicle_type == "rail" %}<i class="fa fa-subway"></i>{% endif %}
+                {% if route.vehicle_type == "bus" %}
+                  <i class="fa fa-bus"></i>
                   {% if route.operator.short_name %}
                     {{ route.operator.short_name }} Route {{ route.name }}
                   {% else %}
                     {{ route.operator.name }} Route {{ route.name }}
                   {% endif %}
-              </li>
-            {% endfor %}
-          </ul>
-      {% endif %}
+                {% endif %}
 
-      {% if frequent_routes %}
-        <h3>Other Nearby Routes Serving Hotel:</h3>
-          <ul>
-            {% for route in other_routes %}
+                {% if route.vehicle_type == "metro" or route.vehicle_type == "tram" or route.vehicle_type == "rail" %}
+                  <i class="fa fa-subway"></i>
+                  {% if route.operator.short_name %}
+                    {{ route.operator.short_name }} {{ route.name }}
+                  {% else %}
+                    {{ route.operator.name }} {{ route.name }}
+                  {% endif %}
+                {% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+
+        {% if other_routes %}
+          <div id="infrequent-routes">
+            <h4>Infrequent Routes Serving Hotel:</h4>
+            <ul>
+              {% for route in other_routes %}
               <li>
                 {% if route.vehicle_type == "bus" %}<i class="fa fa-bus"></i>{% endif %}
                 {% if route.vehicle_type == "metro" or route.vehicle_type == "tram" or route.vehicle_type == "rail" %}<i class="fa fa-subway"></i>{% endif %}
@@ -58,10 +75,13 @@
                   {{ route.operator.name }} Route {{ route.name }}
                 {% endif %}
               </li>
-            {% endfor %}
-          </ul>
-      {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      </section>
     </div>
+
     <div class="tab-pane fade" id="nav-destinations" role="tabpanel" aria-labelledby="nav-destinations-tab">
       Nardi
     </div>
