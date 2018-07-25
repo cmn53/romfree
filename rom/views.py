@@ -73,7 +73,7 @@ def results(request, metro_code, arrival_id):
         'geojson',
         routes,
         geometry_field='geom',
-        fields=('name', 'vehicle_type', 'frequency',)
+        fields=('name', 'vehicle_type', 'frequent',)
     )
 
     destination_geojson = serialize(
@@ -98,6 +98,7 @@ def results(request, metro_code, arrival_id):
 def detail(request, hotel_id):
     hotel = get_object_or_404(Hotel, pk=hotel_id)
     destinations = Destination.objects.filter(metro=hotel.metro)
+    map_center = [hotel.geom.coords[1], hotel.geom.coords[0]]
     # hotel_destination_set = HotelDestination.objects.filter(hotel=hotel)
 
     routes = hotel.nearby_routes(0.25)
@@ -115,11 +116,12 @@ def detail(request, hotel_id):
             }
     }
     hotel_geojson = json.dumps(hotel_dict)
-    route_geojson = serialize('geojson', routes, geometry_field='geom', fields=('name', 'vehicle_type', 'frequency',))
+    route_geojson = serialize('geojson', routes, geometry_field='geom', fields=('name', 'vehicle_type', 'frequent',))
     destination_geojson = serialize('geojson', destinations, geometry_field='geom', fields=('name',))
 
     context = {
         'hotel': hotel,
+        'map_center': map_center,
         'frequent_routes': frequent_routes,
         'other_routes': other_routes,
         'hotel_geojson': hotel_geojson,

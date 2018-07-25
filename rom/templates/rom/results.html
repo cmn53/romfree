@@ -1,8 +1,55 @@
 {% extends 'rom/base.html' %}
+{% load static %}
 {% block content %}
 
-  <h2>Hotels</h2>
-  <div id="map"></div>
+  <h2>{{metro}} Hotels</h2>
+
+  <div class="results-container">
+    <div class="map-container">
+      <div id="map"></div>
+    </div>
+
+
+    <section class="results-section">
+      <ul class="results-list">
+      {% for hotel in hotels %}
+        <li class="result">
+          <div class="image-container">
+            {% if hotel.hotel.image_set.first %}
+            <img src="http://photos.hotelbeds.com/giata/{{ hotel.hotel.image_set.first }}" alt="hotel stock image"/>
+            {% else %}
+              <img id="h-icon" src="{% static 'rom/img/hotel-01.png' %}"/>
+            {% endif %}
+          </div>
+          <div class="hotel-info">
+            <h4>{{ hotel.hotel.name }}</h4>
+            <h5>{{ hotel.hotel.address.upper }} {{ hotel.hotel.city.upper }}</h5>
+            <a href="{% url 'rom:detail' hotel.hotel.id %}"><h5 id="detail-button">DETAILS</h5></a>
+          </div>
+          <div class="score-box">{{ hotel.total_qtr_score }}</div>
+        </li>
+      {% endfor %}
+      </ul>
+
+      <div class="pagination">
+        <span class="step-links">
+          {% if hotels.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ hotels.previous_page_number }}">previous</a>
+          {% endif %}
+
+          <span class="current">
+            Page {{ hotels.number }} of {{ hotels.paginator.num_pages }}.
+          </span>
+
+          {% if hotels.has_next %}
+            <a href="?page={{ hotels.next_page_number }}">next</a>
+            <a href="?page={{ hotels.paginator.num_pages }}">last &raquo;</a>
+          {% endif %}
+        </span>
+      </div>
+    </section>
+  </div>
 
   <script type="text/javascript">
     let hotelData = {{ hotel_geojson|safe|escape }};
@@ -17,21 +64,54 @@
       }).addTo(map);
 
 
-    L.geoJson(routeData, {
-      style: function (feature) {
-        return { color: '#00bfff'}
-      }
+    function rail_filter (feature) {
+      if (feature.properties.vehicle_type === "subway" || feature.properties.vehicle_type === "metro" || feature.properties.vehicle_type === "tram")
+          return true
+    }
+
+    function frequent_bus_filter (feature) {
+      if (feature.properties.vehicle_type === "bus" && feature.properties.frequent)
+          return true
+    }
+
+    function infrequent_bus_filter (feature) {
+      if (feature.properties.vehicle_type === "bus" && !feature.properties.frequent)
+          return true
+    }
+
+    let infrequent_bus = L.geoJson(routeData, {
+      filter: infrequent_bus_filter,
+      style: function(feature) {
+          return {color: '#A9A9A9', weight: 1}
+        },
+    }).addTo(map);
+
+    let frequent_bus = L.geoJson(routeData, {
+      filter: frequent_bus_filter,
+      style: function(feature) {
+          return {color: '#00bfff', weight: 2}
+        },
+    }).addTo(map);
+
+    let rail_lines = L.geoJson(routeData, {
+      filter: rail_filter,
+      style: function(feature) {
+          return {color: '#003040', weight: 3}
+      },
     }).addTo(map);
 
     let destinationLayer = L.geoJson(destinationData, {
       pointToLayer: function(feature, latlng) {
-          return L.circleMarker(latlng, {
-            color: '#A9A9A9',
-            weight: 1,
-            fillColor: '#808080',
-            fillOpacity: 1,
-            radius: 3
-          })
+        return L.circleMarker(latlng, {
+          color: '#A9A9A9',
+          weight: 1,
+          fillColor: '#808080',
+          fillOpacity: 1,
+          radius: 3
+        })
+      },
+      onEachFeature: function (feature, layer) {
+        layer.bindTooltip(feature.properties.name)
       }
     }).addTo(map);
 
@@ -61,34 +141,6 @@
 
   </script>
 
-  <div class="pagination">
-    <span class="step-links">
-        {% if hotels.has_previous %}
-            <a href="?page=1">&laquo; first</a>
-            <a href="?page={{ hotels.previous_page_number }}">previous</a>
-        {% endif %}
 
-        <span class="current">
-            Page {{ hotels.number }} of {{ hotels.paginator.num_pages }}.
-        </span>
-
-        {% if hotels.has_next %}
-            <a href="?page={{ hotels.next_page_number }}">next</a>
-            <a href="?page={{ hotels.paginator.num_pages }}">last &raquo;</a>
-        {% endif %}
-    </span>
-</div>
-
-  <ul>
-  {% for hotel in hotels %}
-    <li>
-      <a href="{% url 'rom:detail' hotel.hotel.id %}"}>
-        <img src="http://photos.hotelbeds.com/giata/medium/{{ hotel.hotel.image_set.first }}" alt="hotel stock image"/>
-        <div>{{ hotel.hotel.name }}</div>
-        <div>Score: {{ hotel.total_qtr_score }}</div>
-      </a>
-    </li>
-  {% endfor %}
-  </ul>
 
 {% endblock %}

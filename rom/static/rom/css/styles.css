@@ -4,8 +4,8 @@ body {
 }
 
 nav {
-  background-color: #005F7F;
-  height: 40px;
+  background-color: #002633;
+  height: 30px;
 }
 
 h1, h2, h3, nav {
@@ -18,6 +18,13 @@ h4, ul, p {
   color: #003040;
 }
 
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 60px;
+}
+
 h2 {
   font-size: 1.2rem;
   line-height: 1.1;
@@ -28,6 +35,12 @@ h3 {
   line-height: 1.1;
 }
 
+p {
+  font-weight: 300;
+  font-size: 0.6rem;
+  line-height: 1.2;
+}
+
 nav {
   display: grid;
   grid-template-columns: 1.5fr 2.5fr 0.5fr 1fr;
@@ -36,20 +49,22 @@ nav {
 }
 
 #logo {
-  padding-top: 5px;
+  padding: 5px 0;
   height: 30px;
 }
 
 #about {
   grid-column: 3;
-  font-size: 13px;
-  padding-top: 12px;
+  font-size: 12px;
+  padding-top: 8px;
+  font-weight: 400;
 }
 
 #contact {
   grid-column: 4;
-  font-size: 13px;
-  padding-top: 12px;
+  font-size: 12px;
+  padding-top: 8px;
+  font-weight: 400;
 }
 
 ul {
@@ -58,20 +73,57 @@ ul {
   margin: 0;
 }
 
-
 a, a:visited, a:hover, a:active {
   color: #003040;
   text-decoration: none;
 }
 
-#map {
-  height: 500px;
-  margin: 10px;
+.form-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #0E6D8C;
+  padding: 10px 0;
+  margin: 5% 9%;
+  border-radius: 10px;
+}
+
+.form-container select, .form-container input {
+  font-size: 10px;
+  border: 1px;
+  height: 25px;
+  border-radius: 3px;
+  margin: 0 5px;
+}
+
+
+.form-container > input {
+  background-color: #CC1F45;
+  height: 26px;
+  width: 60px;
+  border-radius: 3px;
+  color: white;
+  font-size: 10px;
 }
 
 .results-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.map-container {
+  width: 50%
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  right: 0;
+  align-self: flex-start;
+  margin: 10px;
+}
+
+#map {
+  height: 500px;
 }
 
 .results-list {
@@ -87,7 +139,7 @@ a, a:visited, a:hover, a:active {
 }
 
 .image-container {
-  background-color: #005F7F;
+  background-color: #0E6D8C;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,8 +151,8 @@ a, a:visited, a:hover, a:active {
 }
 
 #h-icon {
-  width: 80%;
-  height: 80%;
+  width: 60%;
+  height: 60%;
 }
 
 .hotel-info {
@@ -127,10 +179,10 @@ a, a:visited, a:hover, a:active {
 }
 
 #detail-button {
-  background-color: #005F7F;
+  background-color: #0E6D8C;
   padding: 5px 5px;
   color: #FFFFFF;
-  width: 33px;
+  width: 40px;
 }
 
 .hotel-info a:hover {
@@ -157,13 +209,45 @@ a, a:visited, a:hover, a:active {
 
 .detail-top h3 {
   padding-top: 10px;
-  font-weight: lighter;
+  line-height: 1.4;
 }
 
 
 #detailMap {
   height: 300px;
   margin: 10px;
+}
+
+.detail-tabs {
+  margin: 10px;
+}
+
+.nav-tabs {
+  border-top: none;
+}
+
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  background-color: #003040;
+  border-bottom: 1px;
+  border-color: #FFFFFF;
+}
+
+#nav-description-tab, #nav-photos-tab, #nav-service-tab, #nav-destinations-tab {
+  font-size: 0.7rem;
+  line-height: 1.1;
+  color: #FFFFFF;
+}
+
+.tab-pane {
+  background-color: rgba(255,255,255,0.9);
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+.tab-pane img {
+  width: 100px;
 }
 
 .fa {

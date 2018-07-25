@@ -12,6 +12,7 @@ class Route(models.Model):
     geom = models.MultiLineStringField(spatial_index=True)
     frequent = models.BooleanField(default=False)
 
+
     def __str__(self):
         return "%s Route %s" %(self.operator.name, self.name)
 

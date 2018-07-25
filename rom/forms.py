@@ -8,11 +8,15 @@ from .models import Metro, Arrival, Hotel
 
 
 class SearchForm(forms.Form):
-    city = forms.ModelChoiceField(queryset=Metro.objects.all(), label="City")
-    arrival = forms.ModelChoiceField(queryset=Arrival.objects.all(), label="Arrival Location")
-    check_in = forms.DateField(label="Check In Date")
-    check_out = forms.DateField(label="Check Out Date")
+    city = forms.ModelChoiceField(queryset=Metro.objects.all())
+    arrival = forms.ModelChoiceField(queryset=Arrival.objects.all())
+    check_in = forms.DateField(widget=forms.widgets.DateInput(attrs={'type':'date'}))
+    check_out = forms.DateField(widget=forms.widgets.DateInput(attrs={'type':'date'}))
 
+    def __init__(self, *args, **kwargs):
+        super(SearchForm, self).__init__(*args, **kwargs)
+        self.fields['city'].empty_label = 'city'
+        self.fields['arrival'].empty_label = 'arrival location'
 
     def search(self):
         metro = Metro.objects.get(name=self.cleaned_data['city'])

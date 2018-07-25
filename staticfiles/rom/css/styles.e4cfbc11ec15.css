@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  background-color: #003040;
+}
+
+nav {
+  background-color: #005F7F;
+  height: 40px;
+}
+
+h1, h2, h3, nav, ul, p {
+  font-family: 'Arimo', sans-serif;
+  color: #FFFFFF;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+nav > div {
+  font-size: 1rem;
+  padding: 0 20px;
+}
+
+ul {
+  list-style-type: none;
+  font-size: 12px;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+#map {
+  height: 600px;
+  margin: 10px;
+}
+
+#logo {
+  height: 30px;
+  width: auto;
+  padding: 5px 10px;
+}
+
+.results-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.results-list {
+  padding: 0;
+}
+
+.result {
+  background-color: #FFFFFF;
+  height: 75px;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.image-container {
+  background-color: #005F7F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hotel-icon {
+  margin: 10px;
+}
+
+.result img {
+  width: 100%;
+  height: 100%;
+}
+
+.score-box {
+  background-color: #CC1F45;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.fa {
+  color: #FFFFFF;
+  padding: 3px;
+  border-radius: 2px;
+  margin: 2px;
+}
+
+.fa-bus {
+  background-color: #00bfff;
+}
+
+.fa-subway {
+  background-color: #003040;
+}
+
+.leaflet-marker-icon {
+	font-weight: bold;
+	font-family: sans-serif;
+}

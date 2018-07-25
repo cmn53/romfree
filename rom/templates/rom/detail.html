@@ -1,58 +1,123 @@
 {% extends 'rom/base.html' %}
+{% load static %}
 {% block content %}
+<section class="detail-top">
+  <div class"hotel-detail">
+    <h2>{{ hotel.name }}</h2>
+    <h3>{{ hotel.address.upper }} {{ hotel.city.upper }}</h3>
+  </div>
+  <div id="detailMap"></div>
+</section>
 
-<h2>{{ hotel.name }}</h2>
-<h3>{{ hotel.address }} {{ hotel.city }} {{ hotel.zip }}</h3>
-<p>{{ hotel.description}}</p>
-
-{% if frequent_routes %}
-  <h3>Frequent Routes Serving Hotel:</h3>
-    <ul>
-      {% for route in frequent_routes %}
-        <li>
-            {% if route.vehicle_type == "bus" %}<i class="fa fa-bus"></i>{% endif %}
-            {% if route.vehicle_type == "metro" or route.vehicle_type == "tram" or route.vehicle_type == "rail" %}<i class="fa fa-subway"></i>{% endif %}
-            {% if route.operator.short_name %}
-              {{ route.operator.short_name }} Route {{ route.name }}
-            {% else %}
-              {{ route.operator.name }} Route {{ route.name }}
-            {% endif %}
-        </li>
+<section class="detail-tabs">
+  <div>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" id="nav-description-tab" data-toggle="tab" href="#nav-description" role="tab" aria-controls="nav-description" aria-selected="true">DESCRIPTION</a>
+      <a class="nav-item nav-link" id="nav-photos-tab" data-toggle="tab" href="#nav-photos" role="tab" aria-controls="nav-photos" aria-selected="false">PHOTOS</a>
+      <a class="nav-item nav-link" id="nav-service-tab" data-toggle="tab" href="#nav-service" role="tab" aria-controls="nav-service" aria-selected="false">TRANSIT SERVICE</a>
+      <a class="nav-item nav-link" id="nav-destinations-tab" data-toggle="tab" href="#nav-destinations" role="tab" aria-controls="nav-destinations" aria-selected="false">DESTINATIONS</a>
+    </div>
+  </div>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
+      <p>{{ hotel.description}}</p>
+    </div>
+    <div class="tab-pane fade" id="nav-photos" role="tabpanel" aria-labelledby="nav-photos-tab">
+      {% for image in hotel.image_set.all %}
+        <img src="http://photos.hotelbeds.com/giata/{{ image }}" alt="hotel stock image"/>
       {% endfor %}
-    </ul>
-{% endif %}
+    </div>
+    <div class="tab-pane fade" id="nav-service" role="tabpanel" aria-labelledby="nav-service-tab">
+      {% if frequent_routes %}
+        <h3>Frequent Routes Serving Hotel:</h3>
+          <ul>
+            {% for route in frequent_routes %}
+              <li>
+                  {% if route.vehicle_type == "bus" %}<i class="fa fa-bus"></i>{% endif %}
+                  {% if route.vehicle_type == "metro" or route.vehicle_type == "tram" or route.vehicle_type == "rail" %}<i class="fa fa-subway"></i>{% endif %}
+                  {% if route.operator.short_name %}
+                    {{ route.operator.short_name }} Route {{ route.name }}
+                  {% else %}
+                    {{ route.operator.name }} Route {{ route.name }}
+                  {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+      {% endif %}
 
-{% if frequent_routes %}
-  <h3>Other Nearby Routes Serving Hotel:</h3>
-    <ul>
-      {% for route in other_routes %}
-        <li>
-          {% if route.vehicle_type == "bus" %}<i class="fa fa-bus"></i>{% endif %}
-          {% if route.vehicle_type == "metro" or route.vehicle_type == "tram" or route.vehicle_type == "rail" %}<i class="fa fa-subway"></i>{% endif %}
-          {% if route.operator.short_name %}
-            {{ route.operator.short_name }} Route {{ route.name }}
-          {% else %}
-            {{ route.operator.name }} Route {{ route.name }}
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-{% endif %}
-<div id="detailMap"></div>
+      {% if frequent_routes %}
+        <h3>Other Nearby Routes Serving Hotel:</h3>
+          <ul>
+            {% for route in other_routes %}
+              <li>
+                {% if route.vehicle_type == "bus" %}<i class="fa fa-bus"></i>{% endif %}
+                {% if route.vehicle_type == "metro" or route.vehicle_type == "tram" or route.vehicle_type == "rail" %}<i class="fa fa-subway"></i>{% endif %}
+                {% if route.operator.short_name %}
+                  {{ route.operator.short_name }} Route {{ route.name }}
+                {% else %}
+                  {{ route.operator.name }} Route {{ route.name }}
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+      {% endif %}
+    </div>
+    <div class="tab-pane fade" id="nav-destinations" role="tabpanel" aria-labelledby="nav-destinations-tab">
+      Nardi
+    </div>
+  </div>
+</section>
+
+
+
 
 <script type="text/javascript">
-  let map = L.map('detailMap');
-
-  L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}{r}.png',
-    {
-      attribution: '&copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
-    }).addTo(detailMap);
-
   let hotelData = {{ hotel_geojson|safe|escape }};
   let routeData = {{ route_geojson|safe|escape }};
   let destinationData = {{ destination_geojson|safe|escape }};
 
-  L.geoJson(routeData).addTo(detailMap);
+  let map = L.map('detailMap', { minZoom: 13, maxZoom: 17 }).setView({{ map_center }}, 15);
+
+  L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}{r}.png',
+    {
+      attribution: '&copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+    }).addTo(map);
+
+  function rail_filter (feature) {
+    if (feature.properties.vehicle_type === "subway" || feature.properties.vehicle_type === "metro" || feature.properties.vehicle_type === "tram")
+        return true
+  }
+
+  function frequent_bus_filter (feature) {
+    if (feature.properties.vehicle_type === "bus" && feature.properties.frequent)
+        return true
+  }
+
+  function infrequent_bus_filter (feature) {
+    if (feature.properties.vehicle_type === "bus" && !feature.properties.frequent)
+        return true
+  }
+
+  let infrequent_bus = L.geoJson(routeData, {
+    filter: infrequent_bus_filter,
+    style: function(feature) {
+        return {color: '#A9A9A9', weight: 1}
+      },
+  }).addTo(map);
+
+  let frequent_bus = L.geoJson(routeData, {
+    filter: frequent_bus_filter,
+    style: function(feature) {
+        return {color: '#00bfff', weight: 2}
+      },
+  }).addTo(map);
+
+  let rail_lines = L.geoJson(routeData, {
+    filter: rail_filter,
+    style: function(feature) {
+        return {color: '#003040', weight: 3}
+      },
+  }).addTo(map);
 
   let destinationLayer = L.geoJson(destinationData, {
     pointToLayer: function(feature, latlng) {
@@ -64,7 +129,7 @@
           radius: 3
         })
     }
-  }).addTo(detailMap);
+  }).addTo(map);
 
 
   let hotelLayer = L.geoJSON(hotelData, {
@@ -72,7 +137,7 @@
       return L.marker(latlng, {
           icon: L.icon.glyph({
           prefix: '',
-          glyph: feature.properties.score
+          glyph: 'H'
         })
       })
     },

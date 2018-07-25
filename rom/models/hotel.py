@@ -16,6 +16,7 @@ class HotelDestination(models.Model):
     destination = models.ForeignKey(Destination, on_delete=models.CASCADE)
     distance = models.FloatField()
     mode = models.CharField(max_length=50)
+    routes = models.ManyToManyField(Route)
 
     @classmethod
     def load_modes(cls):
@@ -30,6 +31,17 @@ class HotelDestination(models.Model):
             else:
                 hd.mode = "other"
             hd.save()
+
+    @classmethod
+    def load_routes(cls):
+        for hd in HotelDestination.objects.filter(mode="transit"):
+            destination_patterns = hd.destination.nearby_patterns(0.25)
+            hotel_patterns = hd.hotel.nearby_patterns(0.25)
+            intersect_patterns = destination_patterns.filter(pk__in=hotel_patterns)
+
+            for pattern in intersect_patterns:
+                hd.routes.add(pattern.route)
+
 
 
 class HotelArrival(models.Model):
@@ -56,14 +68,14 @@ class HotelArrival(models.Model):
             arrival_patterns = ha.arrival.nearby_patterns(0.25)
             hotel_patterns = ha.hotel.nearby_patterns(0.25)
 
-        if arrival_patterns.filter(pk__in=hotel_patterns):
-            if ha.distance < 10:
-                ha.qtr_arrival_score = 10
+            if arrival_patterns.filter(pk__in=hotel_patterns):
+                if ha.distance < 10:
+                    ha.qtr_arrival_score = 10
+                else:
+                    ha.qtr_arrival_score = 5
             else:
-                ha.qtr_arrival_score = 5
-        else:
-            ha.qtr_arrival_score = 0
-        ha.save()
+                ha.qtr_arrival_score = 0
+            ha.save()
 
     @classmethod
     def load_half_arrival_scores(cls):
@@ -71,14 +83,14 @@ class HotelArrival(models.Model):
             arrival_patterns = ha.arrival.nearby_patterns(0.5)
             hotel_patterns = ha.hotel.nearby_patterns(0.5)
 
-        if arrival_patterns.filter(pk__in=hotel_patterns):
-            if ha.distance < 10:
-                ha.half_arrival_score = 10
+            if arrival_patterns.filter(pk__in=hotel_patterns):
+                if ha.distance < 10:
+                    ha.half_arrival_score = 10
+                else:
+                    ha.half_arrival_score = 5
             else:
-                ha.half_arrival_score = 5
-        else:
-            ha.half_arrival_score = 0
-        ha.save()
+                ha.half_arrival_score = 0
+            ha.save()
 
 
 

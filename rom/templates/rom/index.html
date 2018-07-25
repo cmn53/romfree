@@ -1,16 +1,24 @@
 {% extends 'rom/base.html' %}
+{% load static %}
 {% block content %}
 
-  <h2>Find a hotel. Forgo the rental.</h2>
+  <h1>Find a hotel. Forgo the rental car.</h1>
 
   {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
     <form action="" method="post">
       {% csrf_token %}
-      <table>
-        {{ form.as_table }}
-      </table>
-      <input type="submit" value="Search"></input>
+      <div class="form-container">
+        {% for field in form.visible_fields %}
+          <div>
+            <!-- {% if field.name == "check_in" or field.name == "check_out" %}
+              {{ field.label_tag }}
+            {% endif %} -->
+            {{ field}}
+          </div>
+        {% endfor %}
+        <input type="submit" value="Search"></input>
+        </div>
     </form>
 
 {% endblock %}
