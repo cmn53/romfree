@@ -107,6 +107,53 @@ a, a:visited, a:hover, a:active {
   font-size: 10px;
 }
 
+.transit-photo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.transit-photo {
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 150px;
+  height: 125px;
+  margin: 15px;
+}
+
+.transit-photo h2 {
+  color: #FFFFFF;
+  font-weight: bold;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  background-color: #002633;
+  opacity: 0.75;
+  font-size: 1rem;
+}
+
+#cle {
+  background: url("/static/rom/img/cleveland-01.png");
+  background-size: 100% 100%;
+}
+
+#sea{
+  background: url("/static/rom/img/seattle-01.png");
+  background-size: 100% 100%;
+}
+
+#tor {
+  background: url("/static/rom/img/toronto-01.png");
+  background-size: 100% 100%;
+}
+
+#was {
+  background: url("/static/rom/img/washington_dc-01.png");
+  background-size: 100% 100%;
+}
+
 .results-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
