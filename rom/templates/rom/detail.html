@@ -15,7 +15,8 @@
       <a class="nav-item nav-link active" id="nav-description-tab" data-toggle="tab" href="#nav-description" role="tab" aria-controls="nav-description" aria-selected="true">DESCRIPTION</a>
       <a class="nav-item nav-link" id="nav-photos-tab" data-toggle="tab" href="#nav-photos" role="tab" aria-controls="nav-photos" aria-selected="false">PHOTOS</a>
       <a class="nav-item nav-link" id="nav-service-tab" data-toggle="tab" href="#nav-service" role="tab" aria-controls="nav-service" aria-selected="false">TRANSIT SERVICE</a>
-      <a class="nav-item nav-link" id="nav-destinations-tab" data-toggle="tab" href="#nav-destinations" role="tab" aria-controls="nav-destinations" aria-selected="false">DESTINATIONS</a>
+      <a class="nav-item nav-link" id="nav-walking-tab" data-toggle="tab" href="#nav-walking" role="tab" aria-controls="nav-walking" aria-selected="false">WALKING DESTINATIONS</a>
+      <a class="nav-item nav-link" id="nav-transit-tab" data-toggle="tab" href="#nav-transit" role="tab" aria-controls="nav-transit" aria-selected="false">TRANSIT DESTINATIONS</a>
     </div>
   </div>
 
@@ -39,7 +40,7 @@
               {% for route in frequent_routes %}
               <li>
                 {% if route.vehicle_type == "bus" %}
-                  <i class="fa fa-bus"></i>
+                  <i class="fa fa-bus frequent"></i>
                   {% if route.operator.short_name %}
                     {{ route.operator.short_name }} Route {{ route.name }}
                   {% else %}
@@ -67,8 +68,13 @@
             <ul>
               {% for route in other_routes %}
               <li>
-                {% if route.vehicle_type == "bus" %}<i class="fa fa-bus"></i>{% endif %}
-                {% if route.vehicle_type == "metro" or route.vehicle_type == "tram" or route.vehicle_type == "rail" %}<i class="fa fa-subway"></i>{% endif %}
+                {% if route.vehicle_type == "bus" %}
+                  <i class="fa fa-bus infrequent"></i>
+                {% elif route.vehicle_type == "ferry" %}
+                  <i class="fa fa-ship"></i>
+                {% elif route.vehicle_type == "metro" or route.vehicle_type == "tram" or route.vehicle_type == "rail" %}
+                  <i class="fa fa-subway"></i>
+                {% endif %}
                 {% if route.operator.short_name %}
                   {{ route.operator.short_name }} Route {{ route.name }}
                 {% else %}
@@ -82,9 +88,56 @@
       </section>
     </div>
 
-    <div class="tab-pane fade" id="nav-destinations" role="tabpanel" aria-labelledby="nav-destinations-tab">
-      Nardi
+    <div class="tab-pane fade" id="nav-walking" role="tabpanel" aria-labelledby="nav-walking-tab">
+      {% if walking_destinations %}
+        <h4>Destinations within Walking Distance:</h4>
+        <ul>
+          {% for destination in walking_destinations %}
+          <li>{{ destination.destination.name }}</li>
+          <li>{{ destination.distance|floatformat:"2" }} miles</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
     </div>
+
+    <div class="tab-pane fade" id="nav-transit" role="tabpanel" aria-labelledby="nav-transit-tab">
+      {% if transit_destinations %}
+        <h4>Transit Accessible Destinations:</h4>
+        <ul>
+          {% for destination in transit_destinations %}
+          <li>{{ destination.destination.name }}</li>
+          <li>
+              {% for route in destination.routes.all %}
+                {% if route.frequent %}
+                  {% if route.vehicle_type == "metro" or route.vehicle_type == "tram" or route.vehicle_type == "rail" %}
+                    <i class="fa fa-subway"></i>
+                  {% elif route.vehicle_type == "bus" and route.frequent %}
+                    <i class="fa fa-bus frequent"></i>
+                  {% else %}
+                    <i class="fa fa-bus infrequent"></i>
+                  {% endif %}
+                  <div id="needs-space">{{ route.name }}</div>
+                {% endif %}
+              {% endfor %}
+              {% for route in destination.routes.all %}
+                {% if not route.frequent %}
+                  {% if route.vehicle_type == "metro" or route.vehicle_type == "tram" or route.vehicle_type == "rail" %}
+                    <i class="fa fa-subway"></i>
+                  {% elif route.vehicle_type == "bus" and route.frequent %}
+                    <i class="fa fa-bus frequent"></i>
+                  {% else %}
+                    <i class="fa fa-bus infrequent"></i>
+                  {% endif %}
+                  <div id="needs-space">{{ route.name }}</div>
+                {% endif %}
+              {% endfor %}
+          </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
   </div>
 </section>
 
@@ -148,6 +201,9 @@
           fillOpacity: 1,
           radius: 3
         })
+    },
+    onEachFeature: function (feature, layer) {
+      layer.bindTooltip(feature.properties.name)
     }
   }).addTo(map);
 

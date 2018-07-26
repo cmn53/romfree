@@ -4,7 +4,7 @@ from django.urls import reverse
 from django.core.serializers import serialize
 from django.db.models import F, Sum
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
-from .models import Arrival, Hotel, HotelArrival, Metro, Route, Score, Destination
+from .models import Arrival, Hotel, HotelArrival, Metro, Route, Score, Destination, HotelDestination
 from .forms import SearchForm
 import json
 
@@ -37,16 +37,10 @@ def results(request, metro_code, arrival_id):
 
     routes = Route.objects.filter(operator__metro=metro).exclude(vehicle_type="ferry")
     destinations = Destination.objects.filter(metro=metro)
-    hotel_arrival_set = HotelArrival.objects.filter(hotel__metro=metro, arrival=arrival)
+    hotel_arrival_set = HotelArrival.objects.filter(hotel__metro=metro, arrival=arrival).annotate(score=F('hotel__score__qtr_static_score') + F('qtr_arrival_score')).order_by('-score')
 
     paginator = Paginator(hotel_arrival_set, 20)
     page = request.GET.get('page')
-
-
-
-
-
-
 
     paginated_hotels = paginator.get_page(page)
 
@@ -99,7 +93,9 @@ def detail(request, hotel_id):
     hotel = get_object_or_404(Hotel, pk=hotel_id)
     destinations = Destination.objects.filter(metro=hotel.metro)
     map_center = [hotel.geom.coords[1], hotel.geom.coords[0]]
-    # hotel_destination_set = HotelDestination.objects.filter(hotel=hotel)
+    hotel_destination_set = HotelDestination.objects.filter(hotel=hotel)
+    walking_destinations = hotel_destination_set.filter(mode="walking").order_by("distance")
+    transit_destinations = hotel_destination_set.filter(mode="transit").order_by("-distance")
 
     routes = hotel.nearby_routes(0.25)
     frequent_routes = routes.filter(frequent=True)
@@ -115,6 +111,7 @@ def detail(request, hotel_id):
                 "name": hotel.name,
             }
     }
+
     hotel_geojson = json.dumps(hotel_dict)
     route_geojson = serialize('geojson', routes, geometry_field='geom', fields=('name', 'vehicle_type', 'frequent',))
     destination_geojson = serialize('geojson', destinations, geometry_field='geom', fields=('name',))
@@ -126,6 +123,8 @@ def detail(request, hotel_id):
         'other_routes': other_routes,
         'hotel_geojson': hotel_geojson,
         'route_geojson': route_geojson,
-        'destination_geojson': destination_geojson
+        'destination_geojson': destination_geojson,
+        'walking_destinations': walking_destinations,
+        'transit_destinations': transit_destinations
     }
     return render(request, 'rom/detail.html', context)
