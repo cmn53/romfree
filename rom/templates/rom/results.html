@@ -8,7 +8,7 @@
 
   <div class="results-container">
     <div class="map-container">
-      <div id="map"></div>
+      <div id="map" class="custom-map"></div>
     </div>
 
 
@@ -98,7 +98,7 @@
     let rail_lines = L.geoJson(routeData, {
       filter: rail_filter,
       style: function(feature) {
-          return {color: '#003040', weight: 3}
+          return {color: '#003040', weight: 2.5}
       },
     }).addTo(map);
 
@@ -113,10 +113,9 @@
         })
       },
       onEachFeature: function (feature, layer) {
-        layer.bindTooltip(feature.properties.name)
+        layer.bindTooltip('<h5>'+feature.properties.name+'</h5>')
       }
     }).addTo(map);
-
 
     let hotelLayer = L.geoJSON(hotelData, {
       pointToLayer: function(feature, latlng) {
@@ -128,7 +127,7 @@
         })
       },
       onEachFeature: function (feature, layer) {
-        layer.bindPopup('<h4>'+feature.properties.name+'</h4>')
+        layer.bindPopup("<a href='/hotel/" + feature.properties.id + "'>" + feature.properties.name + "</a>");
       }
     }).addTo(map);
 

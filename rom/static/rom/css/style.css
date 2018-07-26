@@ -80,7 +80,6 @@ a, a:visited, a:hover, a:active {
 }
 
 .form-container {
-
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -171,7 +170,7 @@ a, a:visited, a:hover, a:active {
   font-size: 0.7rem;
   text-align: center;
   margin-top: 10px;
-  padding: 0 14px 10px 14px;
+  padding: 0 13px 10px 13px;
   font-weight: 300;
 }
 
@@ -192,6 +191,53 @@ a, a:visited, a:hover, a:active {
 
 #map {
   height: 500px;
+}
+
+.custom-map a, .custom-map a:visited, .custom-map a:hover, .custom-map a:active {
+  color: #FFFFFF;
+  font-size: 0.65rem;
+  text-decoration: none;
+}
+
+.custom-map .leaflet-popup-content-wrapper {
+  border-radius: 5px;
+  background-color: #003040;
+  opacity: 0.9;
+}
+
+.custom-map .leaflet-popup-content {
+  margin: 5px;
+}
+
+.custom-map .leaflet-popup-close-button {
+  display : none;
+}
+
+.custom-map .leaflet-popup-tip {
+  background-color: #003040;
+  opacity: 0.9;
+}
+
+.custom-map h5 {
+  color: #003040;
+  font-size: 0.65rem;
+}
+
+.custom-map .leaflet-control {
+  display: none;
+}
+
+#detailMap.custom-map h5 {
+  color: #FFFFFF;
+  line-height: 0.5;
+  margin: 5px 0 -5px 0;
+}
+
+#detailMap.custom-map h6 {
+  color: #FFFFFF;
+  font-size: 0.5rem;
+  line-height: 0.5;
+  margin: 0 0 5px 0;
 }
 
 .results-list {
@@ -269,10 +315,17 @@ a, a:visited, a:hover, a:active {
 .detail-top {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  margin: 25px 30px;
+  grid-gap: 0 60px;
 }
 
 .detail-top > div {
-  margin: 15px 10px;
+  padding-top: 10px;
+}
+
+.detail-top h2 {
+  font-size: 1.1rem;
+  line-height: 1.4;
 }
 
 .detail-top h3 {
@@ -281,10 +334,9 @@ a, a:visited, a:hover, a:active {
   font-weight: 300;
 }
 
-
 #detailMap {
-  height: 300px;
-  margin: 10px;
+  height: 320px;
+  margin-bottom: 20px;
 }
 
 .detail-tabs {

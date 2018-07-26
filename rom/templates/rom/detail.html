@@ -2,11 +2,11 @@
 {% load static %}
 {% block content %}
 <section class="detail-top">
-  <div class"hotel-detail">
-    <h2>{{ hotel.name }}</h2>
-    <h3>{{ hotel.address.upper }} {{ hotel.city.upper }}</h3>
+  <div>
+      <h2>{{ hotel.name }}</h2>
+      <h3>{{ hotel.address.upper }} {{ hotel.city.upper }}</h3>
   </div>
-  <div id="detailMap"></div>
+  <div id="detailMap" class="custom-map"></div>
 </section>
 
 <section class="detail-tabs">
@@ -149,7 +149,7 @@
   let routeData = {{ route_geojson|safe|escape }};
   let destinationData = {{ destination_geojson|safe|escape }};
 
-  let map = L.map('detailMap', { minZoom: 13, maxZoom: 17 }).setView({{ map_center }}, 15);
+  let map = L.map('detailMap', { minZoom: 11, maxZoom: 17 }).setView({{ map_center }}, 14);
 
   L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}{r}.png',
     {
@@ -192,6 +192,7 @@
       },
   }).addTo(map);
 
+
   let destinationLayer = L.geoJson(destinationData, {
     pointToLayer: function(feature, latlng) {
         return L.circleMarker(latlng, {
@@ -203,10 +204,11 @@
         })
     },
     onEachFeature: function (feature, layer) {
-      layer.bindTooltip(feature.properties.name)
+      layer.bindPopup("<h5>"+feature.properties.name+"</h5><br /><h6>"+feature.properties.routes+"</h6>")
     }
   }).addTo(map);
 
+  console.log(destinationLayer);
 
   let hotelLayer = L.geoJSON(hotelData, {
     pointToLayer: function(feature, latlng) {
@@ -217,9 +219,6 @@
         })
       })
     },
-    onEachFeature: function (feature, layer) {
-      layer.bindPopup('<h4>'+feature.properties.name+'</h4>')
-    }
   }).addTo(map);
 
 </script>

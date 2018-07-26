@@ -56,6 +56,7 @@ def results(request, metro_code, arrival_id):
                     },
                     "properties": {
                         "order": len(hotel_list),
+                        "id": h.hotel.pk,
                         "name": h.hotel.name,
                         "score": h.total_qtr_score
                     }
@@ -97,9 +98,10 @@ def detail(request, hotel_id):
     walking_destinations = hotel_destination_set.filter(mode="walking").order_by("distance")
     transit_destinations = hotel_destination_set.filter(mode="transit").order_by("-distance")
 
-    routes = hotel.nearby_routes(0.25)
-    frequent_routes = routes.filter(frequent=True)
-    other_routes = routes.filter(frequent=False)
+    all_routes = Route.objects.filter(operator__metro=hotel.metro).exclude(vehicle_type="ferry")
+    hotel_routes = hotel.nearby_routes(0.25)
+    frequent_routes = hotel_routes.filter(frequent=True)
+    other_routes = hotel_routes.filter(frequent=False)
 
     hotel_dict = {
         "type": "Feature",
@@ -112,9 +114,38 @@ def detail(request, hotel_id):
             }
     }
 
+    destination_list = []
+    for hd in hotel_destination_set:
+        if hd.mode == "walking":
+            route_content = "Walking distance"
+        elif hd.mode == "other":
+            route_content = "No direct transit connection"
+        else:
+            route_content = "Accessible by route(s): "
+            routes = hd.routes.all()
+            for route in routes[0:5]:
+                route_content += route.name + "  "
+            if len(routes) > 5:
+                route_content += " + %d more routes" %(len(routes) - 5)
+        destination_list.append(
+            {
+                "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [hd.destination.geom.coords[0], hd.destination.geom.coords[1]]
+                    },
+                    "properties": {
+                        "name": hd.destination.name,
+                        "routes": route_content
+                    }
+            }
+        )
+    destination_geojson = json.dumps(destination_list)
+
+
     hotel_geojson = json.dumps(hotel_dict)
-    route_geojson = serialize('geojson', routes, geometry_field='geom', fields=('name', 'vehicle_type', 'frequent',))
-    destination_geojson = serialize('geojson', destinations, geometry_field='geom', fields=('name',))
+    route_geojson = serialize('geojson', all_routes, geometry_field='geom', fields=('name', 'vehicle_type', 'frequent',))
+    # destination_geojson = serialize('geojson', destinations, geometry_field='geom', fields=('name',))
 
     context = {
         'hotel': hotel,

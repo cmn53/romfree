@@ -2,9 +2,9 @@ L.Icon.Glyph = L.Icon.extend({
 	options: {
 		iconSize: [25, 30],
 		iconAnchor:  [0, 20],
-		popupAnchor: [1, -34],
+		popupAnchor: [0, 0],
 		//shadowSize:  [41, 41],
-		iconUrl: "{% static 'rom/img/cyan-marker.png' %}",
+		// iconUrl: "{% static 'rom/img/cyan-marker.png' %}",
  		// iconSize: [20, 20],
 		// iconAnchor:   [17, 42],
 		// popupAnchor: [1, -32],
